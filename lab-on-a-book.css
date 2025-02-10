@@ -25,9 +25,9 @@
   }
   
   .image-box img {
-    width: 100%; /* Make images fit within their container */
-    max-width: 200px; /* Limit image width to 200px (or any smaller value) */
-    height: 200px; /* Set a fixed height for the image */
+    width: 50%; /* Make images fit within their container */
+    max-width: 50px; /* Limit image width to 200px (or any smaller value) */
+    height: 50px; /* Set a fixed height for the image */
     object-fit: cover; /* Ensures the image fits the box without distortion */
     border-radius: 5px; /* Optional: for rounded corners */
 }
@@ -35,7 +35,7 @@
   
   .image-box img {
     width: 100%; /* Make images fit within their container */
-    max-width: 250px; /* Limit image width to 250px */
+    max-width: 50px; /* Limit image width to 250px */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Optional: for rounded corners */
   }
