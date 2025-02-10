@@ -1,66 +1,56 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-  /* Portfolio Section */
-  .portfolio-section {
-    background-color: #000; /* Black background */
-    color: #d0d0d0; /* Soft white text */
+/* PORTFOLIO SECTION */
+.portfolio-section {
+    background-color: #000;
+    color: #d0d0d0;
     padding: 40px 20px;
     text-align: center;
   }
   
   .portfolio-section h2 {
-    font-size: 1em; /* Slightly smaller heading */
-    color: #ff00ff; /* Neon pink */
+    font-size: 1.8em;
+    color: #ff00ff;
     margin-bottom: 20px;
   }
   
-  /* Grid Layout for Description and Images */
   .portfolio-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align the text and images side by side */
     gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
   }
   
-  /* Left Side: Product Description */
   .description-box {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; /* Take equal width as the image box */
     text-align: left;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
   }
   
-  .description-box h3 {
-    font-size: 1.5em;
-    color: #00ffff;
-    margin-bottom: 15px;
-  }
-  
-  .description-box p {
-    font-size: 0.9em;
-    color: #d0d0d0;
-  }
-  
-  /* Right Side: Images */
   .image-box {
-    flex: 0 0 300px; /* Fixed size for the images */
+    flex: 1; /* Take equal width as the description box */
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
   }
   
   .image-box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
+    width: 100%; /* Make images fit within their container */
+    max-width: 250px; /* Limit image width to 250px */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: for rounded corners */
+  }
+  
+  /* Adjust the text and image alignment */
+  .project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .project-content {
+    flex: 1;
+    margin-right: 20px; /* Space between content and image */
+  }
+  
+  .project-image {
+    flex: 1;
   }
   
