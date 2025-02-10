@@ -1,5 +1,69 @@
-/* PORTFOLIO SECTION */
-.portfolio-section {
+/* GENERAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* HEADER */
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .profile-picture img {
+    max-width: 200px; /* Smaller profile picture */
+    border-radius: 50%;
+  }
+  
+  .bio {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .bio h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .bio p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  .cv-download {
+    margin-top: 20px;
+  }
+  
+  .project-link {
+    color: #ff00ff;
+    text-decoration: none;
+  }
+  
+  /* PORTFOLIO SECTION */
+  .portfolio-section {
     background-color: #000;
     color: #d0d0d0;
     padding: 40px 20px;
@@ -24,35 +88,101 @@
     text-align: left;
   }
   
-  .image-box img {
-    width: 50%; /* Make images fit within their container */
-    max-width: 50px; /* Limit image width to 200px (or any smaller value) */
-    height: 50px; /* Set a fixed height for the image */
-    object-fit: cover; /* Ensures the image fits the box without distortion */
-    border-radius: 5px; /* Optional: for rounded corners */
-}
-
+  .image-box {
+    flex: 1; /* Take equal width as the description box */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
+  }
   
   .image-box img {
-    width: 100%; /* Make images fit within their container */
-    max-width: 50px; /* Limit image width to 250px */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: for rounded corners */
+    width: 200px; /* Set a fixed width for images (similar to Instagram post size) */
+    height: 200px; /* Make images square */
+    object-fit: cover; /* Ensures the images are cropped if they exceed the aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
   }
   
   /* Adjust the text and image alignment */
   .project-card {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;  /* Align items at the top */
+    justify-content: space-between;  /* Space out the content */
+    gap: 20px; /* Space between the description and image */
   }
   
   .project-content {
-    flex: 1;
-    margin-right: 20px; /* Space between content and image */
+    flex: 1;  /* Allow the description to take up most of the space */
   }
   
   .project-image {
     flex: 1;
+  }
+  
+  /* SKILLS SECTION */
+  .skills-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .skills-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .skills-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-button {
+    background-color: #ff00ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .skill-button:hover {
+    background-color: #cc00cc;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+    flex: 1;
+  }
+  
+  .footer-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-right a:hover {
+    color: #ff00ff;
   }
   
