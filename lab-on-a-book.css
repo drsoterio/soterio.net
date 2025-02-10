@@ -1,0 +1,66 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  /* Portfolio Section */
+  .portfolio-section {
+    background-color: #000; /* Black background */
+    color: #d0d0d0; /* Soft white text */
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .portfolio-section h2 {
+    font-size: 1em; /* Slightly smaller heading */
+    color: #ff00ff; /* Neon pink */
+    margin-bottom: 20px;
+  }
+  
+  /* Grid Layout for Description and Images */
+  .portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Left Side: Product Description */
+  .description-box {
+    flex: 1; /* Takes up remaining space */
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+  
+  .description-box h3 {
+    font-size: 1.5em;
+    color: #00ffff;
+    margin-bottom: 15px;
+  }
+  
+  .description-box p {
+    font-size: 0.9em;
+    color: #d0d0d0;
+  }
+  
+  /* Right Side: Images */
+  .image-box {
+    flex: 0 0 300px; /* Fixed size for the images */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
