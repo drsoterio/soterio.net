@@ -1,10 +1,10 @@
 /* GENERAL STYLES */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    font-family: 'Roboto Mono', monospace;
+}
   
   /* HEADER */
   .header {
@@ -61,6 +61,24 @@ body {
     color: #ff00ff;
     text-decoration: none;
   }
+
+    /* HERO SECTION */
+    .portfolio-hero {
+      background-color: #333; /* Deep gray background */
+      color: #00ffff; /* Neon cyan text */
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .portfolio-hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .portfolio-hero p {
+      font-size: 1.2em;
+      color: #d0d0d0; /* Soft white text */
+    }
   
   /* PORTFOLIO SECTION */
   .portfolio-section {
