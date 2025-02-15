@@ -3,14 +3,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a; /* Dark background */
+  color: #e0e0e0; /* Light gray text */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00ffff; /* Neon cyan */
 }
 
 /* HEADER */
 .header {
-  background-color: #000; /* Solid black background */
+  background-color: #0a0a0a;
   padding: 20px;
-  border-bottom: 3px solid #00ffff;
+  border-bottom: 2px solid #00ffff; /* Neon cyan border */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,28 +38,20 @@
 
 .name {
   font-size: 1.5em;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  color: #00ffff; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
   animation: flicker 5s infinite alternate; /* Flicker animation */
 }
 
 .nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-left: 15px;
-  transition: color 0.3s;
 }
-
-.nav a:hover {
-  color: cyan;
-}
-
 
 /* HERO SECTION */
 .portfolio-hero {
-  background-color: #333; /* Deep gray background */
-  color: #00ffff; /* Neon cyan text */
+  background-color: #121212; /* Slightly lighter dark background */
+  color: #00ffff; /* Neon cyan */
   text-align: center;
   padding: 60px 20px;
 }
@@ -56,14 +68,12 @@
 
 /* PORTFOLIO SECTION */
 .portfolio-section {
-  background-color: #000; /* Black background */
-  color: #d0d0d0; /* Soft white text */
+  background-color: #0a0a0a;
   padding: 40px 20px;
-  text-align: center;
 }
 
 .portfolio-section h2 {
-  font-size: 1.8em; /* Slightly smaller heading */
+  font-size: 1.8em;
   color: #ff00ff; /* Neon pink */
   margin-bottom: 20px;
 }
@@ -76,12 +86,11 @@
 }
 
 .project-card {
-  background: #333; /* Dark gray */
+  background: #1a1a1a; /* Dark background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  border: 1px solid #00ffff; /* Neon cyan border */
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: left;
 }
 
 .project-card img {
@@ -100,8 +109,8 @@
 
 .project-card p {
   font-size: 0.9em;
+  color: #e0e0e0; /* Light gray */
   margin-bottom: 15px;
-  color: #d0d0d0; /* Soft white */
 }
 
 .project-link {
@@ -117,7 +126,7 @@
 
 .project-link:hover {
   background: #ff00ff;
-  color: #121212; /* Dark text for contrast */
+  color: #0a0a0a;
 }
 
 .project-card:hover {
@@ -125,34 +134,32 @@
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
 }
 
-
 /* FOOTER */
 .footer {
-  background-color: #000; /* Solid black background */
+  background-color: #0a0a0a;
   padding: 20px;
-  border-top: 3px solid #00ffff;
-  color: white;
+  border-top: 2px solid #00ffff; /* Neon cyan border */
+  color: #e0e0e0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
 }
 
 .footer-left,
 .footer-center {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .footer-right a {
   text-decoration: none;
-  color: white;
-  font-size: 1em;
+  color: #e0e0e0;
+  font-size: 0.9em;
   margin-left: 15px;
   transition: color 0.3s;
 }
 
 .footer-right a:hover {
-  color: cyan;
+  color: #00ffff; /* Neon cyan */
 }
 
 /* Flicker Animation */
