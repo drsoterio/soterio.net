@@ -7,19 +7,16 @@
 }
 
 body {
-  background-color: #000; /* Black background */
-  color: #00ffff; /* Neon cyan text */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  background-color: #0a0a0a; /* Dark background */
+  color: #e0e0e0; /* Light gray text */
+  line-height: 1.6;
 }
 
 /* HEADER */
 .header {
   background-color: #000; /* Solid black background */
   padding: 20px;
-  border-bottom: 3px solid #00ffff;
+  border-bottom: 3px solid #00ffff; /* Neon cyan border */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,8 +24,8 @@ body {
 
 .name {
   font-size: 1.5em;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  color: #00ffff; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
   animation: flicker 5s infinite alternate; /* Flicker animation */
 }
 
@@ -46,7 +43,7 @@ body {
 
 /* HERO SECTION */
 .publications-hero {
-  background-color: #333; /* Dark gray */
+  background-color: #121212; /* Slightly lighter dark background */
   color: #00ffff; /* Neon cyan */
   text-align: center;
   padding: 60px 20px;
@@ -59,19 +56,18 @@ body {
 
 .publications-hero p {
   font-size: 1.2em;
-  color: #d0d0d0; /* Soft white */
+  color: #d0d0d0; /* Soft white text */
 }
 
 /* PUBLICATIONS SECTION */
 .publications-section {
-  background-color: #000; /* Black background */
-  color: #d0d0d0; /* Soft white */
+  background-color: #0a0a0a;
   padding: 40px 20px;
   text-align: center;
 }
 
 .publications-section h2 {
-  font-size: 1.8em; /* Slightly smaller heading */
+  font-size: 1.8em;
   color: #ff00ff; /* Neon pink */
   margin-bottom: 20px;
 }
@@ -89,12 +85,11 @@ body {
 }
 
 .publication-card {
-  background: #333; /* Dark gray */
+  background: #1a1a1a; /* Dark background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  border: 1px solid #00ffff; /* Neon cyan border */
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: left;
 }
 
 .publication-card img {
@@ -113,8 +108,8 @@ body {
 
 .publication-card p {
   font-size: 0.9em;
+  color: #e0e0e0; /* Light gray */
   margin-bottom: 15px;
-  color: #d0d0d0; /* Soft white */
 }
 
 .publication-link {
@@ -130,7 +125,7 @@ body {
 
 .publication-link:hover {
   background: #ff00ff;
-  color: #121212; /* Dark text for contrast */
+  color: #0a0a0a;
 }
 
 .publication-card:hover {
@@ -138,17 +133,15 @@ body {
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
 }
 
-
 /* FOOTER */
 .footer {
   background-color: #000; /* Solid black background */
   padding: 20px;
-  border-top: 3px solid #00ffff;
+  border-top: 3px solid #00ffff; /* Neon cyan border */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
 }
 
 .footer-left,
