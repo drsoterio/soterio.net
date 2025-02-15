@@ -72,12 +72,13 @@ a:hover {
   padding: 40px 20px;
 }
 
+/* Center the h2 heading */
 .portfolio-section h2 {
   font-size: 1.8em;
   color: #ff00ff; /* Neon pink */
+  text-align: center; /* Center the text */
   margin-bottom: 20px;
 }
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
