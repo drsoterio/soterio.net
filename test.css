@@ -3,14 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
   }
   
   /* HEADER */
   .header {
-    background-color: #000; /* Solid black background */
+    background-color: #ffffff;
     padding: 20px;
-    border-bottom: 3px solid #00ffff;
+    border-bottom: 2px solid #e0e0e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,27 +24,25 @@
   
   .name {
     font-size: 1.5em;
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
-    animation: flicker 5s infinite alternate; /* Flicker animation */
+    color: #333;
+    font-weight: 500;
   }
   
   .nav a {
     text-decoration: none;
-    color: white;
-    font-size: 1.2em;
+    color: #333;
+    font-size: 1em;
     margin-left: 15px;
     transition: color 0.3s;
   }
   
   .nav a:hover {
-    color: cyan;
+    color: #007bff;
   }
   
   /* ABOUT SECTION */
   .about-section {
-    background-color: #333; /* Dark gray */
-    color: #d0d0d0; /* Soft white for text */
+    background-color: #ffffff;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -57,7 +61,7 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    box-shadow: 0 0 10px #00ffff, 0 0 10px #ff00ff; /* Subtle glow */
+    border: 4px solid #e0e0e0;
   }
   
   .bio {
@@ -66,85 +70,40 @@
   }
   
   .bio h1 {
-    color: #00ffff; /* Cyan for headings */
-    font-size: 1.8em;
+    color: #333;
+    font-size: 2em;
     margin-bottom: 15px;
   }
   
-  .bio .intro {
-    font-size: 1.1em;
-    font-weight: 400; /* Normal font weight for simplicity */
-    margin-bottom: 15px;
-  }
-  
-  .bio .details h2 {
-    color: #ff00ff; /* Pink for section headings */
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .bio .details ul {
-    list-style: none; /* No bullets for minimalism */
-    padding-left: 0;
-    margin-bottom: 15px;
-  }
-  
-  .bio .details ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-  }
-  
-  .bio .details ul li::before {
-    content: "›"; /* Cyberpunk arrow for list items */
-    color: #00ffff; /* Cyan arrow */
-    position: absolute;
-    left: 0;
+  .bio p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
   }
   
   .cv-download {
     margin-top: 20px;
   }
   
-  .cv-link {
-    color: #00ffff;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    border: 1px solid #00ffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .cv-link:hover {
-    background: #00ffff;
-    color: #121212;
-  }
-  
-  /* BUTTON STYLE FOR CV LINK */
   .project-link {
-    color: #ff00ff; /* Neon pink */
+    color: #007bff;
     text-decoration: none;
-    font-size: 1em; /* Match button size */
+    font-size: 1em;
     font-weight: bold;
-    border: 1px solid #ff00ff;
-    padding: 5px 10px;
+    border: 2px solid #007bff;
+    padding: 8px 16px;
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
   }
   
   .project-link:hover {
-    background: #ff00ff;
-    color: #121212; /* Dark text for contrast */
-    text-shadow: none;
+    background: #007bff;
+    color: #ffffff;
   }
-  
   
   /* SKILLS SECTION */
   .skills-section {
-    background-color: #000; /* Black background */
-    color: #00ffff; /* Cyan */
+    background-color: #ffffff;
     padding: 40px;
   }
   
@@ -154,48 +113,47 @@
     text-align: left;
   }
   
-  .skills-container ul {
-    list-style: none;
-    padding-left: 0;
+  .skills-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
   }
   
-  .skills-container li {
-    margin-bottom: 10px;
+  .skills-title {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    width: 200px;
   }
   
-  /* CV SECTION */
-  .cv-section {
-    background-color: #333; /* Gray background */
-    color: #00ffff;
-    padding: 40px;
+  .skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
-  .cv-link {
-    color: #ff00ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+  .skill-button {
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
   }
   
-  .cv-link:hover {
-    color: cyan;
-  }
-  
-  .cv-details {
-    margin-bottom: 20px;
-  }
-  
-  .cv-details h2 {
-    color: #ff00ff;
-    margin-bottom: 10px;
+  .skill-button:hover {
+    background: #007bff;
+    color: #ffffff;
   }
   
   /* FOOTER */
   .footer {
-    background-color: #000; /* Solid black background */
+    background-color: #ffffff;
     padding: 20px;
-    border-top: 3px solid #00ffff;
-    color: white;
+    border-top: 2px solid #e0e0e0;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,82 +162,17 @@
   
   .footer-left,
   .footer-center {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   
   .footer-right a {
     text-decoration: none;
-    color: white;
-    font-size: 1em;
+    color: #333;
+    font-size: 0.9em;
     margin-left: 15px;
     transition: color 0.3s;
   }
   
   .footer-right a:hover {
-    color: cyan;
-  }
-  
-  /* Flicker Animation */
-  @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      opacity: 1;
-    }
-    20%, 24%, 55% {
-      opacity: 0.3;
-    }
-  }
-  
-  /* SKILLS SECTION */
-  .skills-section {
-    background-color: #000; /* Black background */
-    color: #00ffff; /* Neon cyan text */
-    padding: 20px 40px; /* Space around the entire section */
-    text-align: left;
-  }
-  
-  .skills-container {
-    margin-left: 200px; /* Add a small margin to create space from the section title */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .skills-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align all items to the left */
-    gap: 10px;
-    margin-left: 0; /* Ensure rows align uniformly */
-  }
-  
-  .skills-title {
-    color: #00ffff; /* Neon cyan */
-    font-size: 1em; /* Match button font size */
-    font-weight: regular;
-    white-space: nowrap; /* Prevent text wrapping */
-    margin-left: 10px; /* Add space between topics and the container edge */
-  }
-  
-  .skills-buttons {
-    display: flex;
-    flex-grow: 1; /* Allow the buttons to take up remaining space */
-    gap: 10px;
-    margin-left: 10px; /* Create a consistent indent for the buttons */
-  }
-  
-  .skill-button {
-    background: #1a1a1a; /* Dark background */
-    color: #00f0ff; /* Neon cyan text */
-    border: 2px solid cyan;
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    white-space: nowrap; /* Prevent text wrapping inside buttons */
-  }
-  
-  .skill-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px pink, 0 0 20px cyan;
+    color: #007bff;
   }
