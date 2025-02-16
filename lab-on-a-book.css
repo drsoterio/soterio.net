@@ -37,21 +37,49 @@
 
 
 /* HERO SECTION */
-.portfolio-hero {
+.hero {
   background-color: #333; /* Deep gray background */
   color: #00ffff; /* Neon cyan text */
   text-align: center;
   padding: 60px 20px;
 }
 
-.portfolio-hero h1 {
+.hero h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-.portfolio-hero p {
+.hero p {
   font-size: 1.2em;
   color: #d0d0d0; /* Soft white text */
+}
+
+/* CONTENT SECTION */
+.content {
+  background-color: #000; /* Black background */
+  color: #d0d0d0; /* Soft white text */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1.8em; /* Slightly smaller heading */
+  color: #ff00ff; /* Neon pink */
+  margin-bottom: 20px;
+}
+
+.text-content {
+  /* Add styles for the text content */
+}
+
+.image-content {
+  /* Add styles for the image content */
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 /* PORTFOLIO SECTION */
