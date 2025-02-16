@@ -40,7 +40,37 @@ a:hover {
   font-size: 1.5em;
   color: #00ffff; /* Neon cyan */
   text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate; /* Flicker animation */
+  animation: flicker 5s infinite alternate, glitch 2s infinite; /* Flicker and glitch animation */
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 .nav a {
