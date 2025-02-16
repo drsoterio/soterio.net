@@ -135,6 +135,24 @@
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
   }
   
+  /* Bottom Image Row Section */
+.bottom-images {
+  padding: 20px;
+  background-color: #f0f0f0; /* Optional: Add a background color */
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between; /* Distribute images evenly */
+  gap: 10px; /* Add spacing between images */
+}
+
+.image-row img {
+  max-width: 30%; /* Adjust the width of each image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
   /* FOOTER */
   .footer {
     background-color: #0a0a0a;
