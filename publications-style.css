@@ -251,7 +251,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
-/* Add these keyframes for the glitching effect */
+/* Flicker animation for the glow effect */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
@@ -261,28 +261,35 @@ a:hover {
   }
 }
 
+/* Glitch animation without movement */
 @keyframes glitch {
   0% {
-    transform: translate(0);
+    opacity: 1;
+    color: #00ffff;
   }
   20% {
-    transform: translate(-2px, 2px);
+    opacity: 0.8;
+    color: #ff00ff; /* Neon pink */
   }
   40% {
-    transform: translate(2px, -2px);
+    opacity: 1;
+    color: #00ffff;
   }
   60% {
-    transform: translate(-2px, 2px);
+    opacity: 0.9;
+    color: #ff00ff; /* Neon pink */
   }
   80% {
-    transform: translate(2px, -2px);
+    opacity: 1;
+    color: #00ffff;
   }
   100% {
-    transform: translate(0);
+    opacity: 1;
+    color: #00ffff;
   }
 }
 
-/* Update the .name class to include the glitching animation */
+/* Apply the animations to the .name class */
 .name {
   font-size: 1.5em;
   color: #00ffff; /* Neon cyan */
