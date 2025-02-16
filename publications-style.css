@@ -40,7 +40,7 @@ a:hover {
   font-size: 1.5em;
   color: #00ffff; /* Neon cyan */
   text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  /* Flicker animation removed */
+  animation: flicker 5s infinite alternate; /* Flicker animation */
 }
 
 .nav a {
