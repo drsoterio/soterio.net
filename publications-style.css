@@ -77,6 +77,7 @@ a:hover {
   font-size: 1.8em;
   color: #ff00ff; /* Neon pink */
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .journal-papers-grid {
