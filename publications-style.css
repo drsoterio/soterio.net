@@ -146,8 +146,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
 }
+
 
 .book-card {
   background-color: #1a1a1a;
