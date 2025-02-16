@@ -40,7 +40,7 @@ a:hover {
   font-size: 1.5em;
   color: #00ffff; /* Neon cyan */
   text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate, glitch 2s infinite; /* Flicker and glitch animation */
+  animation: flicker 5s infinite alternate; /* Flicker animation */
 }
 
 @keyframes flicker {
@@ -251,20 +251,13 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
-/* Flicker animation for the glow effect */
+/* Flicker Animation */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    opacity: 1;
   }
   20%, 24%, 55% {
-    text-shadow: none;
+    opacity: 0.3;
   }
 }
 
-/* Apply the animations to the .name class */
-.name {
-  font-size: 1.5em;
-  color: #00ffff; /* Neon cyan */
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate; /* Flicker animation */
-}
