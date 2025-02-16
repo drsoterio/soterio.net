@@ -142,12 +142,12 @@ a:hover {
   text-align: center;
 }
 
-.books-row {
+.books-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: nowrap; /* Ensure books stay in the same row */
+  gap: 20px; /* Space between cards */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
-
 
 .book-card {
   background-color: #1a1a1a;
@@ -155,12 +155,12 @@ a:hover {
   border: 1px solid #00ffff;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: calc(33.333% - 14px); /* Adjusted calculation for better alignment */
+  width: 300px; /* Fixed width for consistency */
+  flex-shrink: 0; /* Prevent cards from shrinking */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
-
 
 .book-card:hover {
   transform: translateY(-5px);
