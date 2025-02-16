@@ -155,10 +155,12 @@ a:hover {
   border: 1px solid #00ffff;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: calc(33.333% - 20px); /* Three cards per row with gap accounted */
+  width: calc(33.333% - 14px); /* Adjusted calculation for better alignment */
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
+
 
 .book-card:hover {
   transform: translateY(-5px);
