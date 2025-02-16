@@ -261,38 +261,10 @@ a:hover {
   }
 }
 
-/* Glitch animation without movement */
-@keyframes glitch {
-  0% {
-    opacity: 1;
-    color: #00ffff;
-  }
-  20% {
-    opacity: 0.8;
-    color: #ff00ff; /* Neon pink */
-  }
-  40% {
-    opacity: 1;
-    color: #00ffff;
-  }
-  60% {
-    opacity: 0.9;
-    color: #ff00ff; /* Neon pink */
-  }
-  80% {
-    opacity: 1;
-    color: #00ffff;
-  }
-  100% {
-    opacity: 1;
-    color: #00ffff;
-  }
-}
-
 /* Apply the animations to the .name class */
 .name {
   font-size: 1.5em;
   color: #00ffff; /* Neon cyan */
   text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate, glitch 2s infinite; /* Flicker and glitch animation */
+  animation: flicker 5s infinite alternate; /* Flicker animation */
 }
