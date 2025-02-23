@@ -135,12 +135,32 @@
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
   }
   
+/* Bottom Image Row Section */
+.bottom-images {
+  padding: 20px;
+  background-color: #121212; /* Slightly lighter dark background */
+}
+
+.image-row {
+  display: flex; /* Use Flexbox to align images in a row */
+  justify-content: space-between; /* Distribute images evenly */
+  gap: 10px; /* Add spacing between images */
+}
+
+.image-row img {
+  max-width: 30%; /* Adjust the width of each image */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #00ffff; /* Neon cyan border */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-sizing: border-box; /* Ensure the border is included in the image's width */
+}
+
   /* FOOTER */
   .footer {
     background-color: #0a0a0a;
     padding: 20px;
     border-top: 2px solid #00ffff; /* Neon cyan border */
-    color: #e0e0e0;
+    color:#e0e0e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
