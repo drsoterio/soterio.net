@@ -75,14 +75,24 @@
     gap: 40px; /* Space between text and images */
   }
   
-  .text-content {
-        width: 100%; /* Adjust to fit the container */
-        max-width: 600px; /* Prevents them from being too large */
-        display: block;
-        margin: 20px auto; /* Centers the image */
-      }
-      
-
+  /* Adjust images to match text width */
+.text-content img {
+    width: 100%; /* Make images responsive to container width */
+    max-width: 600px; /* Prevents images from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper spacing */
+    margin: 20px auto; /* Centers the images */
+    border-radius: 5px; /* Smooth edges */
+    border: 1px solid #00ffff; /* Neon cyan border */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect for images */
+  .text-content img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+  
   .text-content h2 {
     font-size: 1.8em;
     color: #ff00ff; /* Neon pink */
