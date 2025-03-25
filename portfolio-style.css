@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: #0a0a0a; /* Dark background */
-  color: #e0e0e0; /* Light gray text */
+  background-color: #0a0a0a;
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  font-family: 'Orbitron', sans-serif;
 }
 
 a {
@@ -23,14 +23,14 @@ a {
 }
 
 a:hover {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
 }
 
 /* HEADER */
 .header {
   background-color: #0a0a0a;
   padding: 20px;
-  border-bottom: 2px solid #00ffff; /* Neon cyan border */
+  border-bottom: 2px solid #00ffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,9 +38,9 @@ a:hover {
 
 .name {
   font-size: 1.5em;
-  color: #00ffff; /* Neon cyan */
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate; /* Flicker animation */
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  animation: flicker 5s infinite alternate;
 }
 
 .nav a {
@@ -50,8 +50,8 @@ a:hover {
 
 /* HERO SECTION */
 .portfolio-hero {
-  background-color: #121212; /* Slightly lighter dark background */
-  color: #00ffff; /* Neon cyan */
+  background-color: #121212;
+  color: #00ffff;
   text-align: center;
   padding: 60px 20px;
 }
@@ -63,7 +63,7 @@ a:hover {
 
 .portfolio-hero p {
   font-size: 1.2em;
-  color: #d0d0d0; /* Soft white text */
+  color: #d0d0d0;
 }
 
 /* PORTFOLIO SECTION */
@@ -72,13 +72,13 @@ a:hover {
   padding: 40px 20px;
 }
 
-/* Center the h2 heading */
 .portfolio-section h2 {
   font-size: 1.8em;
-  color: #ff00ff; /* Neon pink */
-  text-align: center; /* Center the text */
+  color: #ff00ff;
+  text-align: center;
   margin-bottom: 20px;
 }
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,16 +87,18 @@ a:hover {
 }
 
 .project-card {
-  background: #1a1a1a; /* Dark background */
+  background: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #00ffff; /* Neon cyan border */
+  border: 1px solid #00ffff;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  color: inherit;
 }
 
 .project-card img {
   width: 100%;
-  height: 200px; /* Adjust height as needed */
+  height: 200px;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -104,30 +106,14 @@ a:hover {
 
 .project-card h3 {
   font-size: 1.2em;
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
   margin-bottom: 10px;
 }
 
 .project-card p {
   font-size: 0.9em;
-  color: #e0e0e0; /* Light gray */
+  color: #e0e0e0;
   margin-bottom: 15px;
-}
-
-.project-link {
-  color: #ff00ff; /* Neon pink */
-  text-decoration: none;
-  font-size: 0.9em;
-  font-weight: bold;
-  border: 1px solid #ff00ff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.project-link:hover {
-  background: #ff00ff;
-  color: #0a0a0a;
 }
 
 .project-card:hover {
@@ -135,11 +121,55 @@ a:hover {
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.5);
 }
 
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tag {
+  font-size: 0.7em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tag Colors */
+.tag-education { background-color: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; color: #00ffff; }
+.tag-design { background-color: rgba(255, 0, 255, 0.1); border: 1px solid #ff00ff; color: #ff00ff; }
+.tag-chemistry { background-color: rgba(0, 255, 0, 0.1); border: 1px solid #00ff00; color: #00ff00; }
+.tag-art { background-color: rgba(255, 165, 0, 0.1); border: 1px solid #ffa500; color: #ffa500; }
+.tag-tech { background-color: rgba(0, 191, 255, 0.1); border: 1px solid #00bfff; color: #00bfff; }
+.tag-interactive { background-color: rgba(138, 43, 226, 0.1); border: 1px solid #8a2be2; color: #8a2be2; }
+.tag-ux { background-color: rgba(255, 20, 147, 0.1); border: 1px solid #ff1493; color: #ff1493; }
+.tag-web { background-color: rgba(30, 144, 255, 0.1); border: 1px solid #1e90ff; color: #1e90ff; }
+.tag-food { background-color: rgba(255, 69, 0, 0.1); border: 1px solid #ff4500; color: #ff4500; }
+.tag-app { background-color: rgba(100, 149, 237, 0.1); border: 1px solid #6495ed; color: #6495ed; }
+.tag-nature { background-color: rgba(34, 139, 34, 0.1); border: 1px solid #228b22; color: #228b22; }
+.tag-photo { background-color: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; color: #ffd700; }
+.tag-cinema { background-color: rgba(220, 20, 60, 0.1); border: 1px solid #dc143c; color: #dc143c; }
+.tag-products { background-color: rgba(218, 112, 214, 0.1); border: 1px solid #da70d6; color: #da70d6; }
+.tag-life { background-color: rgba(60, 179, 113, 0.1); border: 1px solid #3cb371; color: #3cb371; }
+.tag-writing { background-color: rgba(255, 105, 180, 0.1); border: 1px solid #ff69b4; color: #ff69b4; }
+.tag-science { background-color: rgba(0, 206, 209, 0.1); border: 1px solid #00ced1; color: #00ced1; }
+.tag-interview { background-color: rgba(147, 112, 219, 0.1); border: 1px solid #9370db; color: #9370db; }
+.tag-diversity { background-color: rgba(255, 127, 80, 0.1); border: 1px solid #ff7f50; color: #ff7f50; }
+.tag-media { background-color: rgba(123, 104, 238, 0.1); border: 1px solid #7b68ee; color: #7b68ee; }
+.tag-audio { background-color: rgba(255, 140, 0, 0.1); border: 1px solid #ff8c00; color: #ff8c00; }
+.tag-society { background-color: rgba(106, 90, 205, 0.1); border: 1px solid #6a5acd; color: #6a5acd; }
+.tag-event { background-color: rgba(199, 21, 133, 0.1); border: 1px solid #c71585; color: #c71585; }
+.tag-sustainability { background-color: rgba(46, 139, 87, 0.1); border: 1px solid #2e8b57; color: #2e8b57; }
+.tag-global { background-color: rgba(70, 130, 180, 0.1); border: 1px solid #4682b4; color: #4682b4; }
+
 /* FOOTER */
 .footer {
   background-color: #0a0a0a;
   padding: 20px;
-  border-top: 2px solid #00ffff; /* Neon cyan border */
+  border-top: 2px solid #00ffff;
   color: #e0e0e0;
   display: flex;
   justify-content: space-between;
@@ -160,7 +190,7 @@ a:hover {
 }
 
 .footer-right a:hover {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
 }
 
 /* Flicker Animation */
