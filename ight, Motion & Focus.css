@@ -112,26 +112,27 @@ a:hover {
 }
 
 /* Bottom Image Row Section */
+/* Add this to your existing CSS */
 .bottom-images {
   padding: 20px;
-  background-color: #121212; /* Slightly lighter dark background */
+  background-color: #121212;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .image-row {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to next line */
-  justify-content: center; /* Center items */
-  gap: 20px; /* Add spacing between images */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .image-row img {
-  flex: 1 1 calc(33.333% - 20px); /* Three items per row with gap accounted for */
-  max-width: calc(33.333% - 20px); /* Three items per row with gap accounted for */
-  min-width: 250px; /* Minimum width before wrapping */
+  width: calc((100% - 40px) / 3); /* 3 images per row accounting for gap */
+  max-width: 100%;
   height: auto;
-  border: 1px solid #00ffff; /* Neon cyan border */
+  object-fit: contain;
+  border: 1px solid #00ffff;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
