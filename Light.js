@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get modal elements
     const modal = document.getElementById("imageModal");
@@ -22,6 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Prevent background scrolling when modal is open
         document.body.style.overflow = 'hidden';
+        
+        // Calculate and set appropriate image display size
+        const img = new Image();
+        img.onload = function() {
+          const windowRatio = window.innerWidth / window.innerHeight;
+          const imageRatio = img.width / img.height;
+          
+          if (windowRatio > imageRatio) {
+            // Window is wider than image aspect ratio
+            modalImg.style.width = 'auto';
+            modalImg.style.height = '80vh';
+          } else {
+            // Window is taller than image aspect ratio
+            modalImg.style.width = '90%';
+            modalImg.style.height = 'auto';
+          }
+        };
+        img.src = this.src;
       });
     });
     
@@ -47,23 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === "Escape" && modal.style.display === "block") {
         modal.style.display = "none";
         document.body.style.overflow = 'auto';
-      }
-    });
-    
-    // Maintain aspect ratio of modal image on resize
-    window.addEventListener('resize', function() {
-      if (modal.style.display === "block") {
-        const img = new Image();
-        img.src = modalImg.src;
-        const ratio = img.width / img.height;
-        
-        if (window.innerWidth / window.innerHeight > ratio) {
-          modalImg.style.width = 'auto';
-          modalImg.style.height = '80vh';
-        } else {
-          modalImg.style.width = '90%';
-          modalImg.style.height = 'auto';
-        }
       }
     });
   });
