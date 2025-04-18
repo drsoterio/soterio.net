@@ -45,11 +45,11 @@ a:hover {
 }
 
 .tagline {
-  font-size: 0.9em;
-  color: #ff00ff;
-  margin-top: 8px;
-  font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 5px #ff00ff;
+  font-size: 0.95em;
+  color: #39ff14; /* matrix green */
+  font-family: 'Orbitron', monospace;
+  margin-top: 5px;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
   animation: flicker 6s infinite alternate;
 }
 
@@ -103,6 +103,12 @@ a:hover {
   font-size: 1em;
   color: #e0e0e0;
   margin-bottom: 20px;
+}
+
+.bio .highlight {
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 4px #00ffff;
 }
 
 .cv-download {
