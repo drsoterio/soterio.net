@@ -32,9 +32,9 @@ a:hover {
   padding: 20px;
   border-bottom: 2px solid #00ffff;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  flex-wrap: wrap;
 }
 
 .name {
@@ -45,21 +45,15 @@ a:hover {
 }
 
 .tagline {
-  font-size: 0.95em;
-  color: #39ff14; /* matrix green */
-  font-family: 'Orbitron', monospace;
+  font-size: 0.9em;
+  color: #ffffff;
+  font-family: 'Source Code Pro', monospace;
   margin-top: 5px;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-  animation: flicker 6s infinite alternate;
-}
-
-.nav {
-  margin-top: 10px;
 }
 
 .nav a {
   font-size: 1em;
-  margin: 0 10px;
+  margin-left: 15px;
 }
 
 /* ABOUT SECTION */
@@ -107,8 +101,13 @@ a:hover {
 
 .bio .highlight {
   font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 4px #00ffff;
+  color: #00cfff; /* soft cyan-blue */
+}
+
+.neon-text {
+  color: #ff00ff; /* Neon pink */
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .cv-download {
@@ -133,27 +132,25 @@ a:hover {
 
 /* VALUES SECTION */
 .values-section {
-  background-color: #0a0a0a;
+  background-color: #121212;
   padding: 40px 20px;
-  border-top: 2px solid #00ffff;
 }
 
 .values-section h2 {
   font-family: 'Orbitron', sans-serif;
-  color: #00ffff;
+  color: #ffffff;
   text-align: center;
   font-size: 1.8em;
   margin-bottom: 20px;
-  text-shadow: 0 0 5px #00ffff;
 }
 
 .values-list {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding-left: 0;
 }
 
@@ -161,20 +158,13 @@ a:hover {
   font-size: 1em;
   padding: 12px 20px;
   border: 1px solid #00ffff;
-  border-radius: 8px;
-  background-color: #121212;
+  border-radius: 10px;
+  background-color: #1a1a1a;
   color: #e0e0e0;
-  text-shadow: 0 0 5px #00ffff;
   font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.3s ease;
-}
-
-.values-list li:hover {
-  transform: scale(1.02);
-  background-color: #1a1a1a;
 }
 
 /* SKILLS SECTION */
@@ -199,7 +189,7 @@ a:hover {
 }
 
 .skill-category h3 {
-  color: #00ffff;
+  color: #ffffff;
   font-size: 1.2em;
   margin-bottom: 15px;
 }
@@ -252,13 +242,4 @@ a:hover {
   20%, 24%, 55% {
     opacity: 0.3;
   }
-}
-
-.neon-text {
-  color: #ff00ff;
-  font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-  display: inline-block;
-  animation: flicker 4s infinite alternate;
 }
