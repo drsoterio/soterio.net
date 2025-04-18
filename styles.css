@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: #0a0a0a; /* Dark background */
-  color: #e0e0e0; /* Light gray text */
+  background-color: #0a0a0a;
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  font-family: 'Orbitron', sans-serif;
 }
 
 a {
@@ -23,29 +23,43 @@ a {
 }
 
 a:hover {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
 }
 
 /* HEADER */
 .header {
   background-color: #0a0a0a;
   padding: 20px;
-  border-bottom: 2px solid #00ffff; /* Neon cyan border */
+  border-bottom: 2px solid #00ffff;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .name {
-  font-size: 1.5em;
-  color: #00ffff; /* Neon cyan */
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate; /* Flicker animation */
+  font-size: 1.8em;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  animation: flicker 5s infinite alternate;
+}
+
+.tagline {
+  font-size: 0.9em;
+  color: #ff00ff;
+  margin-top: 8px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px #ff00ff;
+  animation: flicker 6s infinite alternate;
+}
+
+.nav {
+  margin-top: 10px;
 }
 
 .nav a {
   font-size: 1em;
-  margin-left: 15px;
+  margin: 0 10px;
 }
 
 /* ABOUT SECTION */
@@ -59,6 +73,7 @@ a:hover {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   align-items: flex-start;
   max-width: 900px;
@@ -69,8 +84,8 @@ a:hover {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  border: 4px solid #00ffff; /* Neon cyan border */
-  box-shadow: 0 0 10px #00ffff; /* Subtle glow */
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
 }
 
 .bio {
@@ -79,7 +94,7 @@ a:hover {
 }
 
 .bio h1 {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
   font-size: 2em;
   margin-bottom: 15px;
 }
@@ -95,7 +110,7 @@ a:hover {
 }
 
 .project-link {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
@@ -110,11 +125,55 @@ a:hover {
   color: #0a0a0a;
 }
 
+/* VALUES SECTION */
+.values-section {
+  background-color: #0a0a0a;
+  padding: 40px 20px;
+  border-top: 2px solid #00ffff;
+}
 
+.values-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.values-list {
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 0;
+}
+
+.values-list li {
+  font-size: 1em;
+  padding: 12px 20px;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  background-color: #121212;
+  color: #e0e0e0;
+  text-shadow: 0 0 5px #00ffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.values-list li:hover {
+  transform: scale(1.02);
+  background-color: #1a1a1a;
+}
 
 /* SKILLS SECTION */
 .skills-section {
-  background-color: #121212; /* Slightly lighter dark background */
+  background-color: #121212;
   padding: 40px 20px;
 }
 
@@ -127,14 +186,14 @@ a:hover {
 }
 
 .skill-category {
-  background-color: #1a1a1a; /* Dark background */
+  background-color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #00ffff; /* Neon cyan border */
+  border: 1px solid #00ffff;
 }
 
 .skill-category h3 {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
   font-size: 1.2em;
   margin-bottom: 15px;
 }
@@ -147,26 +206,23 @@ a:hover {
 
 .skills-list span {
   background-color: #0a0a0a;
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9em;
-  border: 1px solid #00ffff; /* Neon cyan border */
+  border: 1px solid #00ffff;
 }
 
 /* FOOTER */
 .footer {
   background-color: #0a0a0a;
   padding: 20px;
-  border-top: 2px solid #00ffff; /* Neon cyan border */
+  border-top: 2px solid #00ffff;
   color: #e0e0e0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-left,
-.footer-center {
+  flex-wrap: wrap;
   font-size: 0.9em;
 }
 
@@ -179,7 +235,7 @@ a:hover {
 }
 
 .footer-right a:hover {
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff;
 }
 
 /* Flicker Animation */
@@ -193,8 +249,10 @@ a:hover {
 }
 
 .neon-text {
-  color: #ff00ff; /* Neon pink */
+  color: #ff00ff;
   font-weight: bold;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: none; /* Ensures no blur or glow effect */
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  display: inline-block;
+  animation: flicker 4s infinite alternate;
 }
