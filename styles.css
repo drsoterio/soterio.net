@@ -133,16 +133,39 @@ a:hover {
 
 /* VALUES SECTION */
 .values-section {
-  background-color: #0a0a0a; /* Match the bio section background */
+  background-color: #111111; /* subtle dark gray to differentiate from black */
   padding: 40px 20px;
 }
 
 .values-section h2 {
   font-family: 'Orbitron', sans-serif;
-  color: #ffffff; /* Make heading white */
+  color: #ffffff;
   text-align: center;
-  font-size: 1.8em; /* Match Skills h2 size */
+  font-size: 1.8em;
   margin-bottom: 20px;
+}
+
+.values-list {
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.values-list li {
+  font-size: 1em;
+  padding: 12px 20px;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* SKILLS SECTION */
