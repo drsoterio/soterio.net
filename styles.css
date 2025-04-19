@@ -68,6 +68,15 @@ a:hover {
 .container {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-values{
+  display: flex;
+  flex-wrap: wrap;
   gap: 0px;
   align-items: flex-start;
   max-width: 900px;
