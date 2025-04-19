@@ -59,7 +59,18 @@ a:hover {
 .nav a:hover {
   background-color: rgba(0, 255, 255, 0.1);
 }
+.tagline {
+  font-size: 0.9em;
+  color: #ffffff;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 5px;
+}
 
+.code-keyword {
+  color: #00ffff;
+  font-weight: bold;
+  font-family: 'Source Code Pro', monospace;
+}
 /* MAIN CONTENT */
 .main-content {
   flex: 1;

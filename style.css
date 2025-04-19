@@ -44,6 +44,19 @@ body {
   color: cyan;
 }
 
+.tagline {
+  font-size: 0.9em;
+  color: #ffffff;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 5px;
+}
+
+.code-keyword {
+  color: #00ffff;
+  font-weight: bold;
+  font-family: 'Source Code Pro', monospace;
+}
+
 /* HERO SECTION */
 .hero {
   background-color: #333; /* Gray background */
@@ -131,3 +144,4 @@ body {
     opacity: 0.3;
   }
 }
+
