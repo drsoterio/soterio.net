@@ -84,7 +84,7 @@ a:hover {
 
 .bio {
   flex: 1;
-  text-align: left;
+  text-align: justify;
 }
 
 .bio h1 {
