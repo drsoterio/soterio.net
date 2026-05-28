@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import sys; content=sys.stdin.read\\(\\); print\\(content[:8000]\\)\")",
+      "Bash(grep -E \"background:|color:|font-size:|#[0-9a-fA-F]{3,6}|rgba\\\\\\(\")",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -l \"/Users/Carolina1/Downloads/Website \\(1\\).zip\")",
+      "Bash(unzip -o \"/Users/Carolina1/Downloads/Website \\(1\\).zip\" -d website_light)",
+      "Read(//tmp/website_light/design_handoff_soterio_light/**)",
+      "Bash(git -C /Users/Carolina1/Documents/site/soterio.net remote -v)",
+      "Bash(git -C /Users/Carolina1/Documents/site/soterio.net status)",
+      "Bash(git *)"
+    ]
+  }
+}
