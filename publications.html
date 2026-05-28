@@ -4,352 +4,829 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | Carolina Sotério</title>
+  <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="publications-style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    .publication-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border: 1px solid #00ffff;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      text-decoration: none;
-      background-color: #0a0a0a;
-      color: #e0e0e0;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .publication-card:hover {
-      background-color: #1a1a1a;
-      box-shadow: 0 0 10px #00ffff;
-    }
-    .publication-card img {
-      width: 80px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-left: 1rem;
-    }
-    .publication-card h4 {
-      margin: 0 0 0.5rem;
-      font-size: 1rem;
-      color: #00ffff;
-    }
-    .publication-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-    .publication-card strong {
-      color: #ff00ff;
-    }
-    .publications-grid {
-      display: flex;
-      flex-direction: column;
-    }
-    a {
-      color: #e0e0e0;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: #00ffff;
-    }
-
-    .footer {
-      background-color: #000;
-      padding: 20px;
-      border-top: 3px solid #00ffff;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-    }
-    .footer-left,
-    .footer-center {
-      font-size: 14px;
-    }
-    .footer-right a {
-      text-decoration: none;
-      color: white;
-      font-size: 14px;
-      margin-left: 15px;
-      transition: color 0.3s;
-    }
-    .footer-right a:hover {
-      color: cyan;
-    }
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 </head>
 <body>
+
 <header class="header">
-  <div class="name">Carolina Sotério</div>
-  <div class="tagline"> &gt; researching <span class="code-keyword">emancipatory_STEM</span></div>
+  <a href="/" class="header-brand"><span class="brand-prompt">&gt;</span> Carolina Sotério</a>
   <nav class="nav">
-    <a href="/">About//CV</a>
-    <a href="/portfolio">Portfolio</a>
-    <a href="/publications">Publications</a>
+    <a href="/">About // CV</a>
+    <a href="/portfolio">Projects</a>
+    <a href="/publications" class="active">Publications</a>
   </nav>
 </header>
-<section class="publications-hero">
-  <h1>Publications</h1>
-</section>
-<section class="publications-section">
-  <div class="publications-grid">
-    
-<h3>2025</h3>
-<a class="publication-card" href="https://doi.org/10.1080/21548455.2025.2534043" target="_blank">
-  <div>
-    <h4>What do they want to learn? Student-centered insights on science communication training</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Lewenstein, B. V.<br>
-    <strong>Journal:</strong> International Journal of Science Education, Part B: Communication and Public Engagement<br>
-    <strong>DOI:</strong> 10.1080/21548455.2025.2534043</p>
-  </div>
-  <img src="showCoverImage.png" alt="Publication cover">
-</a>
 
-<a class="publication-card" href="https://doi.org/10.21240/constr/2025/105.X" target="_blank">
-  <div>
-    <h4>Lab-on-a-Book: A paper-based chemistry kit for hands-on science learning in under-resourced schools</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Blikstein, P.<br>
-    <strong>Conference:</strong> Proceedings of Constructionism 2025<br>
-    <strong>DOI:</strong> 10.21240/constr/2025/105.X</p>
-  </div>
-  <img src="Untitled design (19).png" alt="Publication cover">
-</a>
-<a class="publication-card" href="isls_25.pdf" target="_blank">
-  <div>
-    <h4>Co-constructing (twisted) knowledge: Argumentation in far-right YouTube comments on Brazil’s war with X’s Elon Musk</h4>
-    <p><strong>Authors:</strong> Sotério, C., Russo, R., & Blikstein, P.<br>
-    <strong>Conference:</strong> Proceedings of the International Society of the Learning Sciences (ISLS)<br>
-    <strong>DOI:</strong> https://doi.org/10.22318/icls2025.450699</p>
-  </div>
-  <img src="isls.png" alt="Publication cover">
-</a>
+<main class="publications-main">
+  <div class="pub-layout">
 
-<h3>2024</h3>
-<a class="publication-card" href="https://doi.org/10.11606/T.75.2024.tde-02092024-170105" target="_blank">
-  <div>
-    <h4>What do students want to learn? Participatory elaboration of a guidebook on science communication for chemistry undergraduates</h4>
-    <p>
-      <strong>Author:</strong> Sotério, C.<br>
-      <strong>Type:</strong> Doctoral Dissertation, Universidade de São Paulo<br>
-      <strong>DOI:</strong> 10.11606/T.75.2024.tde-02092024-170105
-    </p>
-  </div>
-  <img src="publication cover site.png" alt="Publication cover">
-</a>
-<a class="publication-card" href="#" target="_blank">
-  <div>
-    <h4>How can we communicate science? Chemistry students guide</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Lewenstein, B. V.<br>
-    <strong>Type:</strong> Guidebook<br>
-    <strong>Status:</strong> Internal Publication</p>
-  </div>
-  <img src="book cover.pdf.png" alt="Publication cover">
-</a>
+  <!-- ── PUBLICATIONS LIST ────────────────────────── -->
+  <div class="publications-list">
 
-<h3>2023</h3>
-<a class="publication-card" href="https://doi.org/10.1021/acs.jchemed.2c00277" target="_blank">
-  <div>
-    <h4>Chemistry students as science journalists: Creating a virtual magazine on COVID-19</h4>
-    <p>
-      <strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-      <strong>Journal:</strong> Journal of Chemical Education, 100(1)<br>
-      <strong>DOI:</strong> 10.1021/acs.jchemed.2c00277
-    </p>
-  </div>
-  <img src="jceda8.2023.100.issue-1.xlargecover.jpg" alt="Publication cover">
-</a>
-<a class="publication-card" href="https://doi.org/10.1186/s43031-022-00069-8" target="_blank">
-  <div>
-    <h4>Teaching controversial socio-scientific issues in online exhibits of science museums: COVID-19 on the scene</h4>
-    <p>
-      <strong>Authors:</strong> Sotério, C., Lamim, A. R. S., & Queiroz, S. L.<br>
-      <strong>Journal:</strong> Disciplinary and Interdisciplinary Science Education Research (SpringerOpen), 5(1)<br>
-      <strong>DOI:</strong> 10.1186/s43031-022-00069-8
-    </p>
-  </div>
-  <img src="diser.jpg" alt="Publication cover">
+    <div class="year-group">
+      <div class="year-label">2025</div>
 
-  <a class="publication-card" href="#" target="_blank">
-  <div>
-    <h4>Improving writing skills through scripting a science podcast for non-expert audiences</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-    <strong>Journal:</strong> Journal of College Science Teaching, 52(6)</p>
-    <p><strong>DOI:</strong> https://doi.org/10.1080/0047231X.2023.12315864</p>
-  </div>
-  <img src="showCoverImage.jpeg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="https://doi.org/10.1080/21548455.2025.2534043" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">What do they want to learn? Student-centered insights on science communication training</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Lewenstein, B. V.<br>
+        <strong>Journal:</strong> International Journal of Science Education, Part B: Communication and Public Engagement
+        <div class="pub-doi">DOI: 10.1080/21548455.2025.2534043</div></div>
+      </div>
+      <img class="pub-cover" src="showCoverImage.png" alt="">
+    </a>
 
-</a>
-<a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20230044" target="_blank">
-  <div>
-    <h4>The biochemistry behind COVID-19: Webquest development and application for emergency remote teaching</h4>
-    <p>
-      <strong>Authors:</strong> Silva, N. S. M., Sotério, C., Canduri, F., & Queiroz, S. L.<br>
-      <strong>Journal:</strong> Química Nova, 46(8)<br>
-      <strong>DOI:</strong> 10.21577/0100-4042.20230044
-    </p>
-  </div>
-  <img src="QN46-8_contra-capa (2).jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="https://doi.org/10.21240/constr/2025/105.X" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Lab-on-a-Book: A paper-based chemistry kit for hands-on science learning in under-resourced schools</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Blikstein, P.<br>
+        <strong>Conference:</strong> Proceedings of Constructionism 2025
+        <div class="pub-doi">DOI: 10.21240/constr/2025/105.X</div></div>
+      </div>
+      <img class="pub-cover" src="Untitled design (19).png" alt="">
+    </a>
 
-<a class="publication-card" href="Estudos-de-caso-abordagem-para-o-ensino-de-quimica (4).pdf" target="_blank">
-  <div>
-    <h4>Case Studies: Approach to Chemistry Education</h4>
-    <p><strong>Authors:</strong> Salete Linhares Queiroz, & Sotério, C.<br>
-    <strong>Publisher:</strong> São Carlos: Diagrama Editorial<br>
-    <strong>ISBN:</strong> 978-65-87224-00-5</p>
-  </div>
-  <img src="case_studies.png" alt="Publication cover">
-</a>
+    <a class="publication-card" href="isls_25.pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Co-constructing (twisted) knowledge: Argumentation in far-right YouTube comments on Brazil's war with X's Elon Musk</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Russo, R., &amp; Blikstein, P.<br>
+        <strong>Conference:</strong> Proceedings of ISLS 2025
+        <div class="pub-doi">DOI: 10.22318/icls2025.450699</div></div>
+      </div>
+      <img class="pub-cover" src="isls.png" alt="">
+    </a>
 
-<h3>2022</h3>
-<a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170809" target="_blank">
-  <div>
-    <h4>Cooperative and collaborative learning to teach chemical equilibrium to freshman students</h4>
-    <p><strong>Authors:</strong> Sotério, C., Teodoro, D. L., & Queiroz, S. L.<br>
-    <strong>Journal:</strong> Química Nova, 45(1)<br>
-    <strong>DOI:</strong> 10.21577/0100-4042.20170809</p>
-  </div>
-  <img src="capa45-1.jpg" alt="Publication cover">
-</a>
-<a class="publication-card" href="https://doi.org/10.36367/ntqr.12.2022.e596" target="_blank">
-  <div>
-    <h4>Elaboration of popular science texts on COVID-19 in higher education chemistry: Content analysis in focus</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-    <strong>Book:</strong> New Trends in Qualitative Research, Vol. 12<br>
-    <strong>DOI:</strong> 10.36367/ntqr.12.2022.e596</p>
-  </div>
-  <img src="cover_issue_12_en_US.jpg" alt="Publication cover">
-</a>
+    </div><!-- /year-group 2025 -->
+    <div class="year-group">
+      <div class="year-label">2024</div>
 
-<a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
-  <div>
-    <h4>Writing Popular Science Texts on Treatments to Fight Covid-19</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-    <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</p>
-  </div>
-  <img src="hands on.jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="https://doi.org/10.11606/T.75.2024.tde-02092024-170105" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">What do students want to learn? Participatory elaboration of a guidebook on science communication for chemistry undergraduates</div>
+        <div class="pub-meta"><strong>Author:</strong> Sotério, C.<br>
+        <strong>Type:</strong> Doctoral Dissertation, Universidade de São Paulo
+        <div class="pub-doi">DOI: 10.11606/T.75.2024.tde-02092024-170105</div></div>
+      </div>
+      <img class="pub-cover" src="publication cover site.png" alt="">
+    </a>
 
-<a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
-  <div>
-    <h4>Creating Blogs about Chemistry and Covid-19</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-    <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</p>
-  </div>
-  <img src="hands on.jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="#" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">How can we communicate science? Chemistry students guide</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Lewenstein, B. V.<br>
+        <strong>Type:</strong> Guidebook · Internal Publication</div>
+      </div>
+      <img class="pub-cover" src="book cover.pdf.png" alt="">
+    </a>
 
-<a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
-  <div>
-    <h4>Analyzing Visual Representation in Brazilian Chemistry Textbooks</h4>
-    <p><strong>Authors:</strong> Lima, M. S., Sotério, C., Larine, H. M., & Queiroz, S. L.<br>
-    <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</p>
-  </div>
-  <img src="hands on.jpg" alt="Publication cover">
-</a>
+    </div><!-- /year-group 2024 -->
+    <div class="year-group">
+      <div class="year-label">2023</div>
 
+    <a class="publication-card" href="https://doi.org/10.1021/acs.jchemed.2c00277" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Chemistry students as science journalists: Creating a virtual magazine on COVID-19</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Journal of Chemical Education, 100(1)
+        <div class="pub-doi">DOI: 10.1021/acs.jchemed.2c00277</div></div>
+      </div>
+      <img class="pub-cover" src="jceda8.2023.100.issue-1.xlargecover.jpg" alt="">
+    </a>
 
-<h3>2021</h3>
-<a class="publication-card" href="https://doi.org/10.31273/alternautas.v8i1.1121" target="_blank">
-  <div>
-    <h4>The provisional nature of science evidenced in times of pandemic</h4>
-    <p><strong>Author:</strong> Sotério, C.<br>
-    <strong>Journal:</strong> Alternautas, 8(1)<br>
-    <strong>DOI:</strong> 10.31273/alternautas.v8i1.1121</p>
-  </div>
-  <img src="cover_issue_64_en_US.png" alt="Publication cover">
-</a>
-<a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170734" target="_blank">
-  <div>
-    <h4>The application of a comic strip, Trinity, in chemistry education</h4>
-    <p><strong>Authors:</strong> Silva, G. B., Sotério, C., & Queiroz, S. L.<br>
-    <strong>Journal:</strong> Química Nova, 44(8)<br>
-    <strong>DOI:</strong> 10.21577/0100-4042.20170734</p>
-  </div>
-  <img src="capa44-7.jpg" alt="Publication cover">
-</a>
-<a class="publication-card" href="http://dx.doi.org/10.22201/fq.18708404e.2021.1.76119" target="_blank">
-  <div>
-    <h4>Combining primary chemistry literature and peer-review into a science communication course</h4>
-    <p><strong>Authors:</strong> Peron, K. A., Sotério, C., & Queiroz, S. L.<br>
-    <strong>Journal:</strong> Educación Química, 32(1)<br>
-    <p><strong>DOI:</strong> 10.22201/fq.18708404e.2021.1.76119</p>
-  </div>
-  <img src="cover_issue_5768_es_ES.jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="https://doi.org/10.1186/s43031-022-00069-8" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Teaching controversial socio-scientific issues in online exhibits of science museums: COVID-19 on the scene</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Lamim, A. R. S., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Disciplinary and Interdisciplinary Science Education Research (SpringerOpen), 5(1)
+        <div class="pub-doi">DOI: 10.1186/s43031-022-00069-8</div></div>
+      </div>
+      <img class="pub-cover" src="diser.jpg" alt="">
+    </a>
 
-<a class="publication-card" href="http://www.ijhsci.info/hsci2021/hsci2021-proceedings/Book_HSCI2021.pdf" target="_blank">
-  <div>
-    <h4>Hands-on an Everyday Chemistry Podcast: The Case of Minuto da Química</h4>
-    <p><strong>Authors:</strong> Sotério, C., Silva, V. M. P., & Queiroz, S. L.<br>
-    <strong>In:</strong> Hands-on Science Conference, Virtual, 2021</p>
-  </div>
-  <img src="hands on 21_page-0001.jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="#" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Improving writing skills through scripting a science podcast for non-expert audiences</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Journal of College Science Teaching, 52(6)
+        <div class="pub-doi">DOI: 10.1080/0047231X.2023.12315864</div></div>
+      </div>
+      <img class="pub-cover" src="showCoverImage.jpeg" alt="">
+    </a>
 
+    <a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20230044" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">The biochemistry behind COVID-19: Webquest development and application for emergency remote teaching</div>
+        <div class="pub-meta"><strong>Authors:</strong> Silva, N. S. M., Sotério, C., Canduri, F., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Química Nova, 46(8)
+        <div class="pub-doi">DOI: 10.21577/0100-4042.20230044</div></div>
+      </div>
+      <img class="pub-cover" src="QN46-8_contra-capa (2).jpg" alt="">
+    </a>
 
-<h3>2020</h3>
-<a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170580" target="_blank">
-  <div>
-    <h4>Writing strategies for incorporating public communication of science into chemistry education</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Queiroz, S. L.<br>
-    <strong>Journal:</strong> Química Nova, 43(8)<br>
-    <strong>DOI:</strong> 10.21577/0100-4042.20170580</p>
-  </div>
-  <img src="capa43-8.jpg" alt="Publication cover">
-</a>
-<a class="publication-card" href="https://doi.org/10.11606/khronos.v0i9.171799" target="_blank">
-  <div>
-    <h4>Shortening distances in science communication: From the Republic of Letters to The Martian</h4>
-    <p><strong>Authors:</strong> Sotério, C., & Populim, M. S.<br>
-    <strong>Journal:</strong> Khronos, (9)<br>
-    <strong>DOI:</strong> 10.11606/khronos.v0i9.171799</p>
-  </div>
-  <img src="cover_issue_11553_pt_BR.jpg" alt="Publication cover">
-</a>
+    <a class="publication-card" href="Estudos-de-caso-abordagem-para-o-ensino-de-quimica (4).pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Case Studies: Approach to Chemistry Education</div>
+        <div class="pub-meta"><strong>Authors:</strong> Salete Linhares Queiroz &amp; Sotério, C.<br>
+        <strong>Publisher:</strong> São Carlos: Diagrama Editorial
+        <div class="pub-doi">ISBN: 978-65-87224-00-5</div></div>
+      </div>
+      <img class="pub-cover" src="case_studies.png" alt="">
+    </a>
 
-<h3>2019</h3>
-<a class="publication-card" href="https://www.researchgate.net/publication/339441999_Science_Communication_in_Higher_Education_Natural_Science_Estrategies" target="_blank">
-  <div>
-    <h4>Science communication in higher education: Strategies in natural sciences</h4>
-    <p><strong>Authors:</strong> Sotério, C., Silva, G. B., & Queiroz, S. L.<br>
-    <strong>In:</strong> XVII EVEQ - Encontro de Educação em Química</p>
-  </div>
-  <img src="eveq.png" alt="Publication cover">
-</a>
+    </div><!-- /year-group 2023 -->
+    <div class="year-group">
+      <div class="year-label">2022</div>
 
-<h3>2015</h3>
-<a class="publication-card" href="https://www.researchgate.net/publication/382520720_Aplicacao_do_residuo_da_erva-mate_do_chimarrao_como_catalisador_em_reacoes_organicas" target="_blank">
-  <div>
-    <h4>Application of chimarrão yerba mate residue as a catalyst in organic reactions</h4>
-    <p><strong>Authors:</strong> Sotério, C., Rosada, L. F., & Maria, W. U.<br>
-    <strong>In:</strong> Conselho Regional de Química – IV Região</p>
-   <p><strong>DOI:</strong> 10.13140/RG.2.2.24785.13925</p>
-  </div>
-  <img src="erva mate tcc_page-0001.jpg" alt="Publication cover">
-</a>
-  </div>
-</section>
-<!-- FOOTER -->
+    <a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170809" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Cooperative and collaborative learning to teach chemical equilibrium to freshman students</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Teodoro, D. L., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Química Nova, 45(1)
+        <div class="pub-doi">DOI: 10.21577/0100-4042.20170809</div></div>
+      </div>
+      <img class="pub-cover" src="capa45-1.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="https://doi.org/10.36367/ntqr.12.2022.e596" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Elaboration of popular science texts on COVID-19 in higher education chemistry: Content analysis in focus</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Book:</strong> New Trends in Qualitative Research, Vol. 12
+        <div class="pub-doi">DOI: 10.36367/ntqr.12.2022.e596</div></div>
+      </div>
+      <img class="pub-cover" src="cover_issue_12_en_US.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Writing Popular Science Texts on Treatments to Fight Covid-19</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</div>
+      </div>
+      <img class="pub-cover" src="hands on.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Creating Blogs about Chemistry and Covid-19</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</div>
+      </div>
+      <img class="pub-cover" src="hands on.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="http://www.ijhsci.info/hsci2022/hsci2022-proceedings/book-hsci2022-v7.pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Analyzing Visual Representation in Brazilian Chemistry Textbooks</div>
+        <div class="pub-meta"><strong>Authors:</strong> Lima, M. S., Sotério, C., Larine, H. M., &amp; Queiroz, S. L.<br>
+        <strong>In:</strong> Hands-on Science Conference, University of Burgos, Spain, 2022</div>
+      </div>
+      <img class="pub-cover" src="hands on.jpg" alt="">
+    </a>
+
+    </div><!-- /year-group 2022 -->
+    <div class="year-group">
+      <div class="year-label">2021</div>
+
+    <a class="publication-card" href="https://doi.org/10.31273/alternautas.v8i1.1121" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">The provisional nature of science evidenced in times of pandemic</div>
+        <div class="pub-meta"><strong>Author:</strong> Sotério, C.<br>
+        <strong>Journal:</strong> Alternautas, 8(1)
+        <div class="pub-doi">DOI: 10.31273/alternautas.v8i1.1121</div></div>
+      </div>
+      <img class="pub-cover" src="cover_issue_64_en_US.png" alt="">
+    </a>
+
+    <a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170734" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">The application of a comic strip, Trinity, in chemistry education</div>
+        <div class="pub-meta"><strong>Authors:</strong> Silva, G. B., Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Química Nova, 44(8)
+        <div class="pub-doi">DOI: 10.21577/0100-4042.20170734</div></div>
+      </div>
+      <img class="pub-cover" src="capa44-7.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="http://dx.doi.org/10.22201/fq.18708404e.2021.1.76119" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Combining primary chemistry literature and peer-review into a science communication course</div>
+        <div class="pub-meta"><strong>Authors:</strong> Peron, K. A., Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Educación Química, 32(1)
+        <div class="pub-doi">DOI: 10.22201/fq.18708404e.2021.1.76119</div></div>
+      </div>
+      <img class="pub-cover" src="cover_issue_5768_es_ES.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="http://www.ijhsci.info/hsci2021/hsci2021-proceedings/Book_HSCI2021.pdf" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Hands-on an Everyday Chemistry Podcast: The Case of Minuto da Química</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Silva, V. M. P., &amp; Queiroz, S. L.<br>
+        <strong>In:</strong> Hands-on Science Conference, Virtual, 2021</div>
+      </div>
+      <img class="pub-cover" src="hands on 21_page-0001.jpg" alt="">
+    </a>
+
+    </div><!-- /year-group 2021 -->
+    <div class="year-group">
+      <div class="year-label">2020</div>
+
+    <a class="publication-card" href="http://dx.doi.org/10.21577/0100-4042.20170580" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Writing strategies for incorporating public communication of science into chemistry education</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Queiroz, S. L.<br>
+        <strong>Journal:</strong> Química Nova, 43(8)
+        <div class="pub-doi">DOI: 10.21577/0100-4042.20170580</div></div>
+      </div>
+      <img class="pub-cover" src="capa43-8.jpg" alt="">
+    </a>
+
+    <a class="publication-card" href="https://doi.org/10.11606/khronos.v0i9.171799" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Shortening distances in science communication: From the Republic of Letters to The Martian</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., &amp; Populim, M. S.<br>
+        <strong>Journal:</strong> Khronos, (9)
+        <div class="pub-doi">DOI: 10.11606/khronos.v0i9.171799</div></div>
+      </div>
+      <img class="pub-cover" src="cover_issue_11553_pt_BR.jpg" alt="">
+    </a>
+
+    </div><!-- /year-group 2020 -->
+    <div class="year-group">
+      <div class="year-label">2019</div>
+
+    <a class="publication-card" href="https://www.researchgate.net/publication/339441999_Science_Communication_in_Higher_Education_Natural_Science_Estrategies" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Science communication in higher education: Strategies in natural sciences</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Silva, G. B., &amp; Queiroz, S. L.<br>
+        <strong>In:</strong> XVII EVEQ — Encontro de Educação em Química</div>
+      </div>
+      <img class="pub-cover" src="eveq.png" alt="">
+    </a>
+
+    </div><!-- /year-group 2019 -->
+    <div class="year-group">
+      <div class="year-label">2015</div>
+
+    <a class="publication-card" href="https://www.researchgate.net/publication/382520720_Aplicacao_do_residuo_da_erva-mate_do_chimarrao_como_catalisador_em_reacoes_organicas" target="_blank">
+      <div class="pub-body">
+        <div class="pub-title">Application of chimarrão yerba mate residue as a catalyst in organic reactions</div>
+        <div class="pub-meta"><strong>Authors:</strong> Sotério, C., Rosada, L. F., &amp; Maria, W. U.<br>
+        <strong>In:</strong> Conselho Regional de Química — IV Região
+        <div class="pub-doi">DOI: 10.13140/RG.2.2.24785.13925</div></div>
+      </div>
+      <img class="pub-cover" src="erva mate tcc_page-0001.jpg" alt="">
+    </a>
+
+    </div><!-- /year-group 2015 -->
+
+  </div><!-- /publications-list -->
+
+  <!-- ── NETWORK VISUALIZATION (right sidebar) ────── -->
+  <aside class="network-aside">
+    <div class="net-aside-header">
+      <div class="net-aside-title">
+        <span class="net-title-text">Research Network</span>
+      </div>
+      <button id="expand-btn" class="net-expand-btn" title="Open fullscreen">⤢ fullscreen</button>
+    </div>
+    <div class="net-controls-aside">
+      <div class="ctrl-label">Color by</div>
+      <div class="toggle-row" id="lens-toggles">
+        <button class="net-toggle active" data-lens="cluster">Topic</button>
+        <button class="net-toggle" data-lens="method">Method</button>
+        <button class="net-toggle" data-lens="year">Year</button>
+        <button class="net-toggle" data-lens="venue">Venue</button>
+      </div>
+    </div>
+    <div class="net-graph">
+      <svg id="net-svg"></svg>
+    </div>
+    <div class="net-panel" id="net-panel">
+      <div class="np-empty">click a node<br>to inspect</div>
+    </div>
+  </aside>
+
+  </div><!-- /pub-layout -->
+</main>
+
 <footer class="footer">
-  <div class="footer-left">
-    <p>Columbia University, New York</p>
+  <div class="footer-main">
+    <div class="footer-top">
+      <div class="footer-headline">Say hi<span class="dot">.</span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/drsoterio/" target="_blank" class="footer-link">
+        <span>GitHub</span><span>↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/soterio/" target="_blank" class="footer-link">
+        <span>LinkedIn</span><span>↗</span>
+      </a>
+      <a href="https://orcid.org/0000-0001-8040-0861" target="_blank" class="footer-link">
+        <span>ORCID</span><span>↗</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ" target="_blank" class="footer-link">
+        <span>Scholar</span><span>↗</span>
+      </a>
+    </div>
   </div>
-  <div class="footer-center">
-    <p>© Carolina Sotério. All rights reserved.</p>
-  </div>
-  <div class="footer-right">
-    <a href="https://github.com/drsoterio" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/soterio/" target="_blank">LinkedIn</a>
-    <a href="https://orcid.org/0000-0001-8040-0861" target="_blank">ORCID</a>
-    <a href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ&hl=en&oi=ao" target="_blank">Scholar</a>
+  <div class="footer-meta">
+    <span>© 2026 Carolina Sotério</span>
+    <span>New York, NY</span>
   </div>
 </footer>
+
+<script>
+// ── DATA ────────────────────────────────────────────────────────────────
+const PAPERS = [
+  // Cluster 1: Material Design
+  { id:"labonabook",    title:"Lab-on-a-Book: A Paper-Based Chemistry Kit for Hands-on Science Learning in Under-Resourced Schools", authors:"Sotério, C., & Blikstein, P.", venue:"Constructionism 2025", year:2025, cluster:"material", method:"design-based", venueType:"conference", status:"published", doi:"10.21240/constr/2025/105.X", url:"https://doi.org/10.21240/constr/2025/105.X" },
+  { id:"boundary",      title:"Students' Odysseys with Boundary Tools: Comparing Home and Classroom Encounters with the Same Science Lab Experiments", authors:"Sotério, C.", venue:"In progress", year:2025, cluster:"material", method:"qualitative-comparative", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+
+  // Cluster 2: AI-Mediated Learning
+  { id:"ai-modes",      title:'"AI, why did the chicken cross the road?" The Emergence of Multiple Interactional Modes in AI-Supported Learning', authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"ai-learning", method:"qualitative-thematic", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"mental-models", title:"Students' Mental Models of AI Chatbots in Inquiry Learning: a Friend, an Instructor, a Browser, and a Partner", authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"ai-learning", method:"qualitative-mixed", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"brainy",        title:"brainy: A Phygital Platform for Children to Design AI", authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"ai-learning", method:"design-based", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"khanmigo",      title:"Rethinking AI EdTech Implementation in Schools in Brazil: The Case of Khanmigo", authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"ai-learning", method:"policy-empirical", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"reading-world", title:"Reading the World Educational Guide / Documentary Outreach Manual", authors:"Sotério, C.", venue:"In progress", year:2025, cluster:"ai-learning", method:"design-based", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+
+  // Cluster 3: Digital Platforms
+  { id:"playful-ai",    title:"Playful AI Social Media: Epistemic Playgrounds on TikTok & Reddit", authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"platforms", method:"qualitative-thematic", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"ai-laziness",   title:'"I Learn More from ChatGPT than from Teachers": Students\' Vernacular Imaginaries of AI, Laziness, and Learning on TikTok', authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"platforms", method:"qualitative-thematic", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"crit-pedagogy", title:"Can Critical Pedagogy Survive Algorithmic Constraints?", authors:"Sotério, C., et al.", venue:"In progress", year:2025, cluster:"platforms", method:"qualitative-thematic", venueType:"in-progress", status:"in-progress", doi:null, url:null },
+  { id:"youtube",       title:"Co-constructing (twisted) knowledge: Argumentation in far-right YouTube comments on Brazil's war with X's Elon Musk", authors:"Sotério, C., Russo, R., & Blikstein, P.", venue:"ISLS 2025", year:2025, cluster:"platforms", method:"qualitative-thematic", venueType:"conference", status:"published", doi:"10.22318/icls2025.450699", url:"isls_25.pdf" },
+  { id:"shortening",    title:"Shortening distances in science communication: From the Republic of Letters to The Martian", authors:"Sotério, C., & Populim, M. S.", venue:"Khronos, (9), 2020", year:2020, cluster:"platforms", method:"theoretical", venueType:"journal", status:"published", doi:"10.11606/khronos.v0i9.171799", url:"https://doi.org/10.11606/khronos.v0i9.171799" },
+
+  // Cluster 4: Science Communication Practice
+  { id:"scicomm-train", title:"What do they want to learn? Student-centered insights on science communication training", authors:"Sotério, C., & Lewenstein, B. V.", venue:"IJSEB 2025", year:2025, cluster:"scicomm", method:"survey-qualitative", venueType:"journal", status:"published", doi:"10.1080/21548455.2025.2534043", url:"https://doi.org/10.1080/21548455.2025.2534043" },
+  { id:"guidebook-diss", title:"What do students want to learn? Participatory elaboration of a guidebook on science communication for chemistry undergraduates", authors:"Sotério, C.", venue:"Doctoral Dissertation, USP, 2024", year:2024, cluster:"scicomm", method:"participatory-action", venueType:"dissertation", status:"published", doi:"10.11606/T.75.2024.tde-02092024-170105", url:"https://doi.org/10.11606/T.75.2024.tde-02092024-170105" },
+  { id:"chem-guide",    title:"How can we communicate science? Chemistry students guide", authors:"Sotério, C., & Lewenstein, B. V.", venue:"Guidebook, 2024", year:2024, cluster:"scicomm", method:"design-based", venueType:"guidebook", status:"published", doi:null, url:null },
+  { id:"journalists",   title:"Chemistry students as science journalists: Creating a virtual magazine on COVID-19", authors:"Sotério, C., & Queiroz, S. L.", venue:"J. Chemical Education, 100(1), 2023", year:2023, cluster:"scicomm", method:"qualitative-content", venueType:"journal", status:"published", doi:"10.1021/acs.jchemed.2c00277", url:"https://doi.org/10.1021/acs.jchemed.2c00277" },
+  { id:"podcast-writ",  title:"Improving writing skills through scripting a science podcast for non-expert audiences", authors:"Sotério, C., & Queiroz, S. L.", venue:"J. College Science Teaching, 52(6), 2023", year:2023, cluster:"scicomm", method:"qualitative-content", venueType:"journal", status:"published", doi:"10.1080/0047231X.2023.12315864", url:"https://doi.org/10.1080/0047231X.2023.12315864" },
+  { id:"pop-texts",     title:"Elaboration of popular science texts on COVID-19 in higher education chemistry: Content analysis in focus", authors:"Sotério, C., & Queiroz, S. L.", venue:"New Trends in Qualitative Research, Vol. 12, 2022", year:2022, cluster:"scicomm", method:"qualitative-content", venueType:"book-chapter", status:"published", doi:"10.36367/ntqr.12.2022.e596", url:"https://doi.org/10.36367/ntqr.12.2022.e596" },
+  { id:"writing-covid", title:"Writing Popular Science Texts on Treatments to Fight Covid-19", authors:"Sotério, C., & Queiroz, S. L.", venue:"Hands-on Science Conference, 2022", year:2022, cluster:"scicomm", method:"qualitative-content", venueType:"conference", status:"published", doi:null, url:null },
+  { id:"blogs-covid",   title:"Creating Blogs about Chemistry and Covid-19", authors:"Sotério, C., & Queiroz, S. L.", venue:"Hands-on Science Conference, 2022", year:2022, cluster:"scicomm", method:"qualitative-content", venueType:"conference", status:"published", doi:null, url:null },
+  { id:"lit-review",    title:"Combining primary chemistry literature and peer-review into a science communication course", authors:"Peron, K. A., Sotério, C., & Queiroz, S. L.", venue:"Educación Química, 32(1), 2021", year:2021, cluster:"scicomm", method:"quasi-experimental", venueType:"journal", status:"published", doi:"10.22201/fq.18708404e.2021.1.76119", url:"http://dx.doi.org/10.22201/fq.18708404e.2021.1.76119" },
+  { id:"podcast-min",   title:"Hands-on an Everyday Chemistry Podcast: The Case of Minuto da Química", authors:"Sotério, C., Silva, V. M. P., & Queiroz, S. L.", venue:"Hands-on Science Conference, 2021", year:2021, cluster:"scicomm", method:"qualitative-content", venueType:"conference", status:"published", doi:null, url:null },
+  { id:"writ-strats",   title:"Writing strategies for incorporating public communication of science into chemistry education", authors:"Sotério, C., & Queiroz, S. L.", venue:"Química Nova, 43(8), 2020", year:2020, cluster:"scicomm", method:"qualitative-content", venueType:"journal", status:"published", doi:"10.21577/0100-4042.20170580", url:"http://dx.doi.org/10.21577/0100-4042.20170580" },
+  { id:"scicomm-he",    title:"Science communication in higher education: Strategies in natural sciences", authors:"Sotério, C., Silva, G. B., & Queiroz, S. L.", venue:"XVII EVEQ, 2019", year:2019, cluster:"scicomm", method:"theoretical", venueType:"conference", status:"published", doi:null, url:null },
+
+  // Cluster 5: Chemistry Education Methods
+  { id:"museums-ssi",   title:"Teaching controversial socio-scientific issues in online exhibits of science museums: COVID-19 on the scene", authors:"Sotério, C., Lamim, A. R. S., & Queiroz, S. L.", venue:"DISER (SpringerOpen), 5(1), 2023", year:2023, cluster:"chem-ed", method:"qualitative-content", venueType:"journal", status:"published", doi:"10.1186/s43031-022-00069-8", url:"https://doi.org/10.1186/s43031-022-00069-8" },
+  { id:"webquest",      title:"The biochemistry behind COVID-19: Webquest development and application for emergency remote teaching", authors:"Silva, N. S. M., Sotério, C., Canduri, F., & Queiroz, S. L.", venue:"Química Nova, 46(8), 2023", year:2023, cluster:"chem-ed", method:"design-based", venueType:"journal", status:"published", doi:"10.21577/0100-4042.20230044", url:"http://dx.doi.org/10.21577/0100-4042.20230044" },
+  { id:"case-studies",  title:"Case Studies: Approach to Chemistry Education", authors:"Salete Linhares Queiroz, & Sotério, C.", venue:"Diagrama Editorial, 2023", year:2023, cluster:"chem-ed", method:"theoretical", venueType:"book", status:"published", doi:null, url:null },
+  { id:"coop-learn",    title:"Cooperative and collaborative learning to teach chemical equilibrium to freshman students", authors:"Sotério, C., Teodoro, D. L., & Queiroz, S. L.", venue:"Química Nova, 45(1), 2022", year:2022, cluster:"chem-ed", method:"quasi-experimental", venueType:"journal", status:"published", doi:"10.21577/0100-4042.20170809", url:"http://dx.doi.org/10.21577/0100-4042.20170809" },
+  { id:"visual-rep",    title:"Analyzing Visual Representation in Brazilian Chemistry Textbooks", authors:"Lima, M. S., Sotério, C., Larine, H. M., & Queiroz, S. L.", venue:"Hands-on Science Conference, 2022", year:2022, cluster:"chem-ed", method:"qualitative-content", venueType:"conference", status:"published", doi:null, url:null },
+  { id:"provisional",   title:"The provisional nature of science evidenced in times of pandemic", authors:"Sotério, C.", venue:"Alternautas, 8(1), 2021", year:2021, cluster:"chem-ed", method:"theoretical", venueType:"journal", status:"published", doi:"10.31273/alternautas.v8i1.1121", url:"https://doi.org/10.31273/alternautas.v8i1.1121" },
+  { id:"comic-strip",   title:"The application of a comic strip, Trinity, in chemistry education", authors:"Silva, G. B., Sotério, C., & Queiroz, S. L.", venue:"Química Nova, 44(8), 2021", year:2021, cluster:"chem-ed", method:"qualitative-content", venueType:"journal", status:"published", doi:"10.21577/0100-4042.20170734", url:"http://dx.doi.org/10.21577/0100-4042.20170734" },
+  { id:"yerba-mate",    title:"Application of chimarrão yerba mate residue as a catalyst in organic reactions", authors:"Sotério, C., Rosada, L. F., & Maria, W. U.", venue:"Conselho Regional de Química, 2015", year:2015, cluster:"chem-ed", method:"experimental", venueType:"conference", status:"published", doi:"10.13140/RG.2.2.24785.13925", url:null },
+];
+
+const EDGES = [
+  // Material
+  { source:"labonabook",   target:"boundary",      type:"shared-site", weight:3 },
+  { source:"labonabook",   target:"ai-modes",      type:"shared-site", weight:2 },
+  { source:"labonabook",   target:"mental-models", type:"shared-site", weight:2 },
+  // AI-Learning internal
+  { source:"ai-modes",     target:"mental-models", type:"shared-site", weight:3 },
+  { source:"ai-modes",     target:"brainy",        type:"thematic",    weight:2 },
+  { source:"mental-models",target:"brainy",        type:"thematic",    weight:1 },
+  { source:"khanmigo",     target:"mental-models", type:"thematic",    weight:1 },
+  { source:"khanmigo",     target:"brainy",        type:"thematic",    weight:1 },
+  { source:"reading-world",target:"brainy",        type:"thematic",    weight:1 },
+  // Platforms internal
+  { source:"playful-ai",   target:"ai-laziness",   type:"shared-site", weight:3 },
+  { source:"playful-ai",   target:"crit-pedagogy", type:"thematic",    weight:2 },
+  { source:"ai-laziness",  target:"crit-pedagogy", type:"thematic",    weight:2 },
+  { source:"youtube",      target:"playful-ai",    type:"thematic",    weight:1 },
+  { source:"youtube",      target:"ai-laziness",   type:"thematic",    weight:1 },
+  { source:"shortening",   target:"playful-ai",    type:"thematic",    weight:1 },
+  // SciComm internal
+  { source:"scicomm-train",target:"guidebook-diss",type:"shared-site", weight:3 },
+  { source:"guidebook-diss",target:"chem-guide",   type:"shared-site", weight:3 },
+  { source:"journalists",  target:"podcast-writ",  type:"thematic",    weight:2 },
+  { source:"journalists",  target:"writ-strats",   type:"thematic",    weight:2 },
+  { source:"podcast-writ", target:"podcast-min",   type:"thematic",    weight:2 },
+  { source:"pop-texts",    target:"writing-covid", type:"shared-site", weight:2 },
+  { source:"writing-covid",target:"blogs-covid",   type:"shared-site", weight:3 },
+  { source:"lit-review",   target:"journalists",   type:"thematic",    weight:1 },
+  { source:"writ-strats",  target:"pop-texts",     type:"thematic",    weight:1 },
+  { source:"scicomm-he",   target:"writ-strats",   type:"thematic",    weight:1 },
+  // Chem-Ed internal
+  { source:"museums-ssi",  target:"webquest",      type:"thematic",    weight:2 },
+  { source:"webquest",     target:"coop-learn",    type:"thematic",    weight:1 },
+  { source:"case-studies", target:"coop-learn",    type:"thematic",    weight:2 },
+  { source:"comic-strip",  target:"case-studies",  type:"thematic",    weight:1 },
+  { source:"visual-rep",   target:"case-studies",  type:"thematic",    weight:1 },
+  { source:"provisional",  target:"museums-ssi",   type:"thematic",    weight:1 },
+  // Cross-cluster bridges
+  { source:"reading-world",target:"crit-pedagogy", type:"thematic",    weight:2 },
+  { source:"youtube",      target:"scicomm-train", type:"thematic",    weight:1 },
+  { source:"journalists",  target:"youtube",       type:"thematic",    weight:1 },
+  { source:"shortening",   target:"scicomm-train", type:"thematic",    weight:1 },
+  { source:"museums-ssi",  target:"provisional",   type:"thematic",    weight:1 },
+  { source:"khanmigo",     target:"ai-modes",      type:"thematic",    weight:1 },
+];
+
+const REGIONS = [
+  { id:"r-material", label:"Material Design", color:"#c0532c", members:["labonabook","boundary"] },
+  { id:"r-ai",       label:"AI-Mediated Learning", color:"#2a6f7e", members:["ai-modes","mental-models","brainy","khanmigo","reading-world"] },
+  { id:"r-platforms",label:"Digital Platforms", color:"#6b3a5c", members:["playful-ai","ai-laziness","crit-pedagogy","youtube","shortening"] },
+  { id:"r-scicomm",  label:"Sci. Communication", color:"#b8862a", members:["scicomm-train","guidebook-diss","chem-guide","journalists","podcast-writ","pop-texts","writing-covid","blogs-covid","lit-review","podcast-min","writ-strats","scicomm-he"] },
+  { id:"r-chemed",   label:"Chemistry Education", color:"#4f6b3a", members:["museums-ssi","webquest","case-studies","coop-learn","visual-rep","provisional","comic-strip","yerba-mate"] },
+];
+
+const CLUSTER_COLORS  = { "material":"#ff6040","ai-learning":"#00e0ff","platforms":"#d946ef","scicomm":"#f59e0b","chem-ed":"#4ade80" };
+const CLUSTER_LABELS  = { "material":"Material Design","ai-learning":"AI-Mediated Learning","platforms":"Digital Platforms","scicomm":"Science Communication","chem-ed":"Chemistry Education" };
+const METHOD_COLORS   = { "design-based":"#ff5cd6","qualitative-thematic":"#00e5ff","qualitative-content":"#c9f731","qualitative-mixed":"#ff9f0a","qualitative-comparative":"#bf5af2","participatory-action":"#30d158","theoretical":"#ffd60a","survey-qualitative":"#ff6b6b","quasi-experimental":"#5ef3ff","policy-empirical":"#ff8c00","experimental":"#ff375f" };
+const STATUS_COLORS   = { "published":"#5ef3ff","in-progress":"#7d8a99" };
+const VENUE_COLORS    = { "journal":"#5ef3ff","conference":"#ff5cd6","dissertation":"#c9f731","book":"#bf5af2","book-chapter":"#ff9f0a","guidebook":"#30d158","in-progress":"#7d8a99" };
+const YEAR_COLORS     = { "2015":"#5ef3ff","2016":"#00cfb4","2017":"#30d158","2018":"#c9f731","2019":"#ffd60a","2020":"#ff9f0a","2021":"#ff6b35","2022":"#ff375f","2023":"#ff5cd6","2024":"#bf5af2","2025":"#9d6bff" };
+
+// ── FILTER: published only for visualization ──────────────────────────────
+const pubIds    = new Set(PAPERS.filter(p => p.status === 'published').map(p => p.id));
+const VIZ_PAPERS = PAPERS.filter(p => pubIds.has(p.id));
+const VIZ_EDGES  = EDGES.filter(e => pubIds.has(e.source) && pubIds.has(e.target));
+const VIZ_REGIONS = REGIONS.map(r => ({
+  ...r, members: r.members.filter(id => pubIds.has(id))
+})).filter(r => r.members.length > 0);
+
+// ── SETUP ────────────────────────────────────────────────────────────────
+const svg    = d3.select("#net-svg");
+const wrap   = document.querySelector(".net-graph");
+let W = wrap.clientWidth;
+let H = wrap.clientHeight;
+
+svg.attr("viewBox", `0 0 ${W} ${H}`);
+
+const defs = svg.append("defs");
+
+// Grid background
+const gridP = defs.append("pattern").attr("id","netgrid").attr("width",40).attr("height",40).attr("patternUnits","userSpaceOnUse");
+gridP.append("path").attr("d","M 40 0 L 0 0 0 40").attr("fill","none").attr("stroke","rgba(0,100,180,0.07)").attr("stroke-width",0.5);
+svg.append("rect").attr("width","100%").attr("height","100%").attr("fill","url(#netgrid)");
+
+// Glow filter
+const glowFilter = defs.append("filter").attr("id","node-glow").attr("x","-80%").attr("y","-80%").attr("width","260%").attr("height","260%");
+glowFilter.append("feGaussianBlur").attr("in","SourceGraphic").attr("stdDeviation","5").attr("result","blur");
+const feMerge = glowFilter.append("feMerge");
+feMerge.append("feMergeNode").attr("in","blur");
+feMerge.append("feMergeNode").attr("in","SourceGraphic");
+
+const gRegions    = svg.append("g");
+const gLinks      = svg.append("g");
+const gNodes      = svg.append("g");
+const gRLabels    = svg.append("g");
+const gDynRegions = svg.append("g"); // convex hulls for non-topic lenses
+const gDynLabels  = svg.append("g"); // labels that follow node centroids
+
+const zoom = d3.zoom().scaleExtent([0.4,3.5]).on("zoom", e => {
+  gRegions.attr("transform",e.transform);
+  gLinks.attr("transform",e.transform);
+  gNodes.attr("transform",e.transform);
+  gRLabels.attr("transform",e.transform);
+  gDynRegions.attr("transform",e.transform);
+  gDynLabels.attr("transform",e.transform);
+});
+svg.call(zoom);
+
+// ── SIMULATION ───────────────────────────────────────────────────────────
+let simNodes = VIZ_PAPERS.map(d => ({...d}));
+let simEdges = VIZ_EDGES.map(e => ({...e}));
+
+// ── CLUSTER LAYOUT (dynamic per lens) ────────────────────────────────────
+const CLUSTER_KEYS = ["material","ai-learning","platforms","scicomm","chem-ed"];
+
+function getLensKey(d, lens) {
+  if (lens === "cluster") return d.cluster;
+  if (lens === "method")  return d.method;
+  if (lens === "year")    return String(d.year);
+  if (lens === "venue")   return d.venueType;
+  return d.cluster;
+}
+
+function computeClusterCenters(lens) {
+  const R = Math.min(W, H) * 0.30;
+  if (lens === "cluster") {
+    const centers = {};
+    CLUSTER_KEYS.forEach((k, i) => {
+      const angle = -Math.PI/2 + i * (2*Math.PI / CLUSTER_KEYS.length);
+      centers[k] = { x: W/2 + Math.cos(angle)*R, y: H/2 + Math.sin(angle)*R };
+    });
+    return centers;
+  }
+  if (lens === "year") {
+    const years = [...new Set(VIZ_PAPERS.map(d => d.year))].sort((a,b)=>a-b);
+    const n = years.length;
+    const pad = W * 0.09;
+    const centers = {};
+    years.forEach((y, i) => {
+      centers[String(y)] = {
+        x: pad + (W - 2*pad) * i / Math.max(n-1, 1),
+        y: i % 2 === 0 ? H * 0.33 : H * 0.67
+      };
+    });
+    return centers;
+  }
+  const keys = [...new Set(VIZ_PAPERS.map(d => getLensKey(d, lens)))].sort();
+  const n = keys.length;
+  const centers = {};
+  keys.forEach((k, i) => {
+    const angle = -Math.PI/2 + i * (2*Math.PI / n);
+    centers[k] = { x: W/2 + Math.cos(angle)*R, y: H/2 + Math.sin(angle)*R };
+  });
+  return centers;
+}
+
+let currentLens = "cluster";
+let clusterCenters = computeClusterCenters("cluster");
+
+function simX(d) { return (clusterCenters[getLensKey(d, currentLens)] || {x: W/2}).x; }
+function simY(d) { return (clusterCenters[getLensKey(d, currentLens)] || {y: H/2}).y; }
+
+const sim = d3.forceSimulation(simNodes)
+  .force("link", d3.forceLink(simEdges).id(d=>d.id).distance(70).strength(0.18))
+  .force("charge", d3.forceManyBody().strength(-200))
+  .force("center", d3.forceCenter(W/2, H/2))
+  .force("collide", d3.forceCollide().radius(20))
+  .force("x", d3.forceX(simX).strength(0.12))
+  .force("y", d3.forceY(simY).strength(0.12));
+
+// ── LINKS ────────────────────────────────────────────────────────────────
+let linkSel = gLinks.selectAll("line").data(simEdges).enter().append("line")
+  .attr("class", d=>`net-link ${d.type}`);
+
+// ── NODES ────────────────────────────────────────────────────────────────
+let nodeSel = gNodes.selectAll("g.net-node").data(simNodes).enter().append("g")
+  .attr("class", "net-node")
+  .call(d3.drag().on("start",dragStart).on("drag",dragging).on("end",dragEnd))
+  .on("click", (e,d) => { e.stopPropagation(); selectNode(d); highlightNeighbors(d); })
+  .on("mouseover", (_,d) => highlightNeighbors(d,true))
+  .on("mouseout", () => unhighlight());
+
+nodeSel.append("circle")
+  .attr("r", d => d.cluster==="scicomm"||d.cluster==="chem-ed" ? 9 : 11)
+  .attr("fill", d => CLUSTER_COLORS[d.cluster])
+  .attr("filter","url(#node-glow)");
+
+nodeSel.append("text")
+  .attr("text-anchor","middle")
+  .attr("dy", 20)
+  .text(d => d.title.length > 28 ? d.title.slice(0,26)+"…" : d.title);
+
+// ── REGIONS ──────────────────────────────────────────────────────────────
+const regionPath = gRegions.selectAll("path").data(VIZ_REGIONS).enter().append("path")
+  .attr("class","net-region").attr("fill",d=>d.color).attr("stroke",d=>d.color);
+
+const rLabelSel = gRLabels.selectAll("text").data(VIZ_REGIONS).enter().append("text")
+  .attr("class","net-region-label").text(d=>d.label);
+
+// ── TICK ─────────────────────────────────────────────────────────────────
+sim.on("tick", () => {
+  linkSel.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  nodeSel.attr("transform",d=>`translate(${d.x},${d.y})`);
+
+  regionPath.attr("d", d => {
+    const pts = d.members.map(id=>simNodes.find(n=>n.id===id)).filter(Boolean).map(n=>[n.x,n.y]);
+    if(pts.length < 2) return "";
+    const exp = expandPts(pts, 34);
+    const hull = d3.polygonHull(exp);
+    return hull ? "M"+hull.map(p=>p.join(",")).join("L")+"Z" : "";
+  });
+
+  rLabelSel.each(function(d) {
+    const pts = d.members.map(id=>simNodes.find(n=>n.id===id)).filter(Boolean).map(n=>[n.x,n.y]);
+    if(!pts.length) return;
+    const cx = pts.reduce((s,p)=>s+p[0],0)/pts.length;
+    const minY = Math.min(...pts.map(p=>p[1]));
+    d3.select(this).attr("x",cx).attr("y",minY-36).attr("text-anchor","middle");
+  });
+
+  // Dynamic hulls and labels for non-topic lenses
+  if (dynRegionPaths) {
+    dynRegionPaths.attr("d", d => {
+      const pts = d.members.map(id=>simNodes.find(n=>n.id===id)).filter(Boolean).map(n=>[n.x,n.y]);
+      if (pts.length < 2) return "";
+      const exp = expandPts(pts, 30);
+      const hull = d3.polygonHull(exp);
+      return hull ? "M"+hull.map(p=>p.join(",")).join("L")+"Z" : "";
+    });
+  }
+  if (dynLabelSel) {
+    dynLabelSel.each(function(d) {
+      const pts = d.members.map(id=>simNodes.find(n=>n.id===id)).filter(Boolean).map(n=>[n.x,n.y]);
+      if (!pts.length) return;
+      const cx = pts.reduce((s,p)=>s+p[0],0)/pts.length;
+      const minY = Math.min(...pts.map(p=>p[1]));
+      d3.select(this).attr("x",cx).attr("y",minY-20).attr("text-anchor","middle");
+    });
+  }
+});
+
+function expandPts(pts, pad) {
+  const cx=pts.reduce((s,p)=>s+p[0],0)/pts.length, cy=pts.reduce((s,p)=>s+p[1],0)/pts.length;
+  const out=[];
+  for(const [x,y] of pts) {
+    const dx=x-cx,dy=y-cy,len=Math.sqrt(dx*dx+dy*dy)||1,a=Math.atan2(dy,dx);
+    out.push([x+(dx/len)*pad,y+(dy/len)*pad]);
+    out.push([x+pad*Math.cos(a+0.5),y+pad*Math.sin(a+0.5)]);
+    out.push([x+pad*Math.cos(a-0.5),y+pad*Math.sin(a-0.5)]);
+  }
+  return out;
+}
+
+// ── DRAG ─────────────────────────────────────────────────────────────────
+function dragStart(e,d) { if(!e.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; }
+function dragging(e,d)  { d.fx=e.x; d.fy=e.y; }
+function dragEnd(e,d)   { if(!e.active) sim.alphaTarget(0); }
+
+// ── PANEL ─────────────────────────────────────────────────────────────────
+const panel = document.getElementById("net-panel");
+let selectedId = null;
+
+function selectNode(d) {
+  selectedId = d.id;
+  nodeSel.classed("selected", n => n.id===d.id);
+  const clr = CLUSTER_COLORS[d.cluster];
+  const link = d.url ? `<a class="np-doi" href="${d.url}" target="_blank">↗ ${d.doi||d.venue}</a>` : (d.doi ? `<span class="np-doi">DOI: ${d.doi}</span>` : "");
+  panel.innerHTML = `
+    <div class="np-cluster" style="color:${clr}">${CLUSTER_LABELS[d.cluster]}</div>
+    <div class="np-title">${d.url && d.status==='published' ? `<a href="${d.url}" target="_blank">${d.title}</a>` : d.title}</div>
+    <div class="np-authors">${d.authors}</div>
+    <div class="np-venue">${d.venue}</div>
+    <div class="np-row"><span class="np-key">status</span><span class="np-val"><span class="np-badge ${d.status==='published'?'badge-published':'badge-inprogress'}">${d.status}</span></span></div>
+    <div class="np-row"><span class="np-key">method</span><span class="np-val">${d.method.replace(/-/g," ")}</span></div>
+    <div class="np-row"><span class="np-key">venue</span><span class="np-val">${d.venueType.replace(/-/g," ")}</span></div>
+    <div class="np-row"><span class="np-key">year</span><span class="np-val">${d.year}</span></div>
+    ${link}
+  `;
+}
+
+svg.on("click", () => {
+  selectedId = null;
+  nodeSel.classed("selected", false);
+  unhighlight();
+  panel.innerHTML = `<div class="np-empty">click a node<br>to inspect</div>`;
+});
+
+// ── HIGHLIGHT ─────────────────────────────────────────────────────────────
+function highlightNeighbors(d, hover=false) {
+  const nb = new Set([d.id]);
+  simEdges.forEach(e => {
+    const s = typeof e.source==="object"?e.source.id:e.source;
+    const t = typeof e.target==="object"?e.target.id:e.target;
+    if(s===d.id) nb.add(t);
+    if(t===d.id) nb.add(s);
+  });
+  nodeSel.classed("dimmed", n => !nb.has(n.id));
+  linkSel.classed("dimmed", e => {
+    const s=typeof e.source==="object"?e.source.id:e.source;
+    const t=typeof e.target==="object"?e.target.id:e.target;
+    return !(s===d.id||t===d.id);
+  });
+}
+function unhighlight() {
+  nodeSel.classed("dimmed", false);
+  linkSel.classed("dimmed", false);
+}
+
+// ── LENS TOGGLES ─────────────────────────────────────────────────────────
+function recolor() {
+  nodeSel.selectAll("circle").transition().duration(350).attr("fill", d => {
+    if(currentLens==="cluster") return CLUSTER_COLORS[d.cluster];
+    if(currentLens==="venue")   return VENUE_COLORS[d.venueType]||"#7d8a99";
+    if(currentLens==="method")  return METHOD_COLORS[d.method]||"#7d8a99";
+    if(currentLens==="year")    return YEAR_COLORS[String(d.year)] || "#7d8a99";
+    return CLUSTER_COLORS[d.cluster];
+  });
+}
+
+// Dynamic hull regions and labels for non-topic lenses
+let dynRegionPaths = null;
+let dynLabelSel    = null;
+
+function setupDynGroups(lens) {
+  gDynRegions.selectAll("*").remove();
+  gDynLabels.selectAll("*").remove();
+  dynRegionPaths = null;
+  dynLabelSel    = null;
+  if (lens === "cluster") return;
+
+  // Group nodes by the current lens key
+  const groups = {};
+  VIZ_PAPERS.forEach(d => {
+    const k = getLensKey(d, lens);
+    if (!groups[k]) groups[k] = { key: k, members: [], color: null };
+    groups[k].members.push(d.id);
+  });
+  const groupArr = Object.values(groups).map(g => {
+    if (lens === "method")     g.color = METHOD_COLORS[g.key]  || "#7d8a99";
+    else if (lens === "venue") g.color = VENUE_COLORS[g.key]   || "#7d8a99";
+    else if (lens === "year")  g.color = YEAR_COLORS[g.key] || "#7d8a99";
+    return g;
+  });
+
+  dynRegionPaths = gDynRegions.selectAll("path")
+    .data(groupArr).enter().append("path")
+    .attr("class","net-region")
+    .attr("fill", d => d.color)
+    .attr("stroke", d => d.color);
+
+  dynLabelSel = gDynLabels.selectAll("text")
+    .data(groupArr).enter().append("text")
+    .attr("class","net-region-label")
+    .text(d => {
+      const label = (lens === "method" || lens === "venue") ? d.key.replace(/-/g," ") : d.key;
+      return label.toUpperCase();
+    });
+}
+
+function updateSimForLens(lens) {
+  currentLens = lens;
+  clusterCenters = computeClusterCenters(lens);
+  setupDynGroups(lens);
+  const fStr = lens === "year" ? 0.28 : 0.15;
+  sim.force("collide", d3.forceCollide().radius(lens === "year" ? 13 : 20))
+     .force("x", d3.forceX(simX).strength(fStr))
+     .force("y", d3.forceY(simY).strength(fStr))
+     .alpha(0.8).restart();
+  const isTopic = lens === "cluster";
+  gRegions.style("display", isTopic ? null : "none");
+  gRLabels.style("display", isTopic ? null : "none");
+  recolor();
+}
+
+document.querySelectorAll("#lens-toggles .net-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#lens-toggles .net-toggle").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    updateSimForLens(btn.dataset.lens);
+  });
+});
+
+// Labels hidden by default; show on hover/select
+const labelStyle = document.createElement("style");
+labelStyle.textContent = `
+  .net-node text { opacity: 0; transition: opacity 0.15s; }
+  .net-node:hover text { opacity: 1; }
+  .net-node.selected text { opacity: 1; }
+  .show-labels .net-node text { opacity: 1; }
+`;
+document.head.appendChild(labelStyle);
+
+// ── FULLSCREEN ────────────────────────────────────────────────────────────
+document.getElementById("expand-btn").addEventListener("click", () => {
+  const aside = document.querySelector(".network-aside");
+  const btn   = document.getElementById("expand-btn");
+  aside.classList.toggle("fullscreen");
+  const isFs = aside.classList.contains("fullscreen");
+  btn.textContent = isFs ? "✕ close" : "⤢ fullscreen";
+  document.body.style.overflow = isFs ? "hidden" : "";
+  setTimeout(() => {
+    W = wrap.clientWidth; H = wrap.clientHeight;
+    svg.attr("viewBox",`0 0 ${W} ${H}`);
+    clusterCenters = computeClusterCenters(currentLens);
+    sim.force("center", d3.forceCenter(W/2,H/2))
+       .force("x", d3.forceX(simX).strength(0.12))
+       .force("y", d3.forceY(simY).strength(0.12))
+       .alpha(0.5).restart();
+  }, 120);
+});
+
+// close fullscreen on Escape
+document.addEventListener("keydown", e => {
+  if(e.key==="Escape") {
+    const aside = document.querySelector(".network-aside");
+    if(aside.classList.contains("fullscreen")) {
+      aside.classList.remove("fullscreen");
+      document.getElementById("expand-btn").textContent = "⤢ fullscreen";
+      document.body.style.overflow = "";
+      setTimeout(()=>{
+        W=wrap.clientWidth; H=wrap.clientHeight;
+        svg.attr("viewBox",`0 0 ${W} ${H}`);
+        clusterCenters = computeClusterCenters(currentLens);
+        sim.force("center",d3.forceCenter(W/2,H/2))
+           .force("x", d3.forceX(simX).strength(0.12))
+           .force("y", d3.forceY(simY).strength(0.12))
+           .alpha(0.3).restart();
+      },120);
+    }
+  }
+});
+
+// ── RESPONSIVE ────────────────────────────────────────────────────────────
+window.addEventListener("resize", () => {
+  W = wrap.clientWidth; H = wrap.clientHeight;
+  svg.attr("viewBox",`0 0 ${W} ${H}`);
+  clusterCenters = computeClusterCenters(currentLens);
+  sim.force("center", d3.forceCenter(W/2,H/2))
+     .force("x", d3.forceX(simX).strength(0.12))
+     .force("y", d3.forceY(simY).strength(0.12))
+     .alpha(0.3).restart();
+});
+</script>
 </body>
 </html>

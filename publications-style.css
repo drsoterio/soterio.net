@@ -1,245 +1,447 @@
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+/* Publications page — page-specific styles. Shared design system in shared.css */
+
+.publications-main {
+  flex: 1;
+  overflow: hidden;
 }
 
-body {
-  background-color: #0a0a0a; /* Dark background */
-  color: #e0e0e0; /* Light gray text */
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif; /* Futuristic font */
-}
-
-a {
-  text-decoration: none;
-  color: #e0e0e0;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #00ffff; /* Neon cyan */
-}
-
-/* HEADER */
-.header {
-  background-color: #0a0a0a;
-  padding: 20px;
-  border-bottom: 2px solid #00ffff; /* Neon cyan border */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.name {
-  font-size: 1.5em;
-  color: #00ffff; /* Neon cyan */
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; /* Glow effect */
-  animation: flicker 5s infinite alternate; /* Flicker animation */
-}
-
-.nav a {
-  font-size: 1em;
-  margin-left: 15px;
-}
-.tagline {
-  font-size: 0.9em;
-  color: #ffffff;
-  font-family: 'Source Code Pro', monospace;
-  margin-top: 5px;
-}
-
-.code-keyword {
-  color: #00ffff;
-  font-weight: bold;
-  font-family: 'Source Code Pro', monospace;
-}
-
-/* HERO SECTION */
-.publications-hero {
-  background-color: #121212; /* Slightly lighter dark background */
-  color: #00ffff; /* Neon cyan */
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.publications-hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.publications-hero p {
-  font-size: 1.2em;
-  color: #d0d0d0; /* Soft white text */
-}
-
-/* PUBLICATIONS SECTION */
-.publications-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.publications-section h2 {
-  font-size: 1.8em;
-  color: #ff00ff; /* Neon pink */
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.journal-papers-grid {
+/* ─── Two-column layout ───────────────────────────── */
+.pub-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
-  gap: 20px; /* Space between cards */
+  grid-template-columns: 1fr 460px;
+  align-items: start;
+  min-height: calc(100vh - 60px);
 }
 
+/* ─── Left: publications list ─────────────────────── */
+.publications-list {
+  padding: 36px 48px 80px 48px;
+}
+
+.pub-list-heading {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line2);
+  margin-bottom: 8px;
+}
+
+.pub-list-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* Year groups */
+.year-group {
+  margin-bottom: 8px;
+}
+
+.year-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 32px 0 14px;
+  border-bottom: 1.5px solid var(--line2);
+  margin-bottom: 4px;
+}
+
+/* ─── Publication card ────────────────────────────── */
 .publication-card {
-  background-color: #1a1a1a; /* Dark background */
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #00ffff; /* Neon cyan border */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 22px;
+  margin-bottom: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-left: 3px solid transparent;
+  color: inherit;
+  transition: border-color 0.22s, border-left-color 0.22s, background 0.22s, box-shadow 0.22s, transform 0.18s;
 }
 
 .publication-card:hover {
-  transform: translateY(-5px); /* Lift card on hover */
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); /* Glow effect */
+  background: var(--bg3);
+  border-color: var(--line2);
+  border-left-color: var(--cyan);
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
+  transform: translateX(3px);
 }
 
-.publication-card h3 {
-  color: #00ffff; /* Neon cyan */
-  font-size: 1.1em; /* Slightly smaller font size */
-  margin-bottom: 10px;
+.pub-body {
+  flex: 1;
+  min-width: 0;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
-.publication-card p {
-  font-size: 0.9em; /* Smaller font size */
-  color: #e0e0e0; /* Light gray */
-  margin-bottom: 10px;
-  line-height: 1.5;
+.pub-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 7px;
+  line-height: 1.45;
+  transition: color 0.2s;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
-.publication-link {
-  color: #00ffff; /* Neon cyan */
-  text-decoration: none;
-  font-size: 0.9em; /* Smaller font size */
-  font-weight: bold;
-  border: 2px solid #00ffff;
-  padding: 6px 12px; /* Smaller padding */
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+.publication-card:hover .pub-title { color: var(--cyan); }
+
+.pub-meta {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.6;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
-.publication-link:hover {
-  background: #00ffff;
-  color: #0a0a0a;
+.pub-meta strong {
+  color: var(--mag);
+  font-weight: 500;
 }
 
-/* BOOKS SECTION */
-.books-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.books-section h2 {
-  font-size: 1.8em;
-  color: #ff00ff; /* Neon pink */
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.books-grid {
-  display: flex;
-  flex-wrap: nowrap; /* Ensure books stay in the same row */
-  gap: 20px; /* Space between cards */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
-}
-
-.book-card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  border: 1px solid #00ffff;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 300px; /* Fixed width for consistency */
-  flex-shrink: 0; /* Prevent cards from shrinking */
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
-}
-
-.book-card img {
-  width: 100%;
-  height: 200px; /* Set fixed height for consistency */
-  object-fit: cover;
-}
-
-.book-card-content {
-  padding: 15px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.book-card h3 {
-  font-size: 1.1em;
-  color: #00ffff;
-  margin-bottom: 10px;
-}
-
-.book-card p {
-  font-size: 0.9em;
-  color: #e0e0e0;
-  margin-bottom: 10px;
-}
-
-.book-link {
-  color: #00ffff;
-  font-size: 0.9em;
-  font-weight: bold;
-  border: 2px solid #00ffff;
-  padding: 6px 12px;
-  border-radius: 5px;
-  text-align: center;
-  transition: background 0.3s, color 0.3s;
-  text-decoration: none;
+.pub-doi {
   display: inline-block;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  color: var(--dim);
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
 }
 
-.book-link:hover {
-  background: #00ffff;
-  color: #0a0a0a;
+.publication-card:hover .pub-doi {
+  border-color: var(--cyan);
+  color: var(--cyan);
 }
 
-/* FOOTER */
-.footer {
-  background-color: #0a0a0a;
-  padding: 20px;
-  border-top: 2px solid #00ffff; /* Neon cyan border */
-  color: #e0e0e0;
+.pub-cover {
+  width: 58px;
+  height: 74px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.publication-card:hover .pub-cover {
+  opacity: 1;
+  border-color: var(--line2);
+}
+
+/* ─── Right: network aside (sticky) ──────────────── */
+.network-aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid var(--line2);
+  background: var(--bg2);
+  overflow: hidden;
+  transition: all 0.25s;
 }
 
-/* Flicker Animation */
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
+.network-aside.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  border-left: none;
+}
+
+/* Aside header */
+.net-aside-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.net-aside-title { display: flex; flex-direction: column; gap: 2px; }
+
+.net-title-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.net-title-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  color: var(--dim);
+  opacity: 0.7;
+  letter-spacing: 0.08em;
+}
+
+.net-expand-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid var(--line2);
+  color: var(--dim);
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.net-expand-btn:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+/* Controls */
+.net-controls-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 16px 12px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+  background: var(--bg3);
+}
+
+.ctrl-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.toggle-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.net-toggle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 3px 9px;
+  background: transparent;
+  border: 1px solid var(--line2);
+  color: var(--dim);
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.04em;
+}
+
+.net-toggle:hover { color: var(--ink); border-color: var(--line2); }
+
+.net-toggle.active {
+  background: var(--cyan);
+  color: #fff;
+  border-color: var(--cyan);
+}
+
+/* Graph canvas */
+.net-graph {
+  flex: 1 1 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  background: var(--bg);
+}
+
+#net-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+#net-svg:active { cursor: grabbing; }
+
+/* Info panel */
+.net-panel {
+  flex-shrink: 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--line2);
+  padding: 14px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+  overflow: hidden;
+}
+
+.np-empty {
+  color: var(--dim);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  line-height: 2;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.np-cluster {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.np-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.np-title a { color: inherit; }
+.np-title a:hover { color: var(--cyan); }
+
+.np-authors {
+  font-size: 11px;
+  color: var(--dim);
+  margin-bottom: 2px;
+}
+
+.np-venue {
+  font-size: 11px;
+  color: var(--dim);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.np-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.np-key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  width: 50px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.np-val { color: var(--text); }
+
+.np-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border: 1px solid;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge-published  { color: var(--cyan); border-color: rgba(0,180,216,0.4); }
+.badge-inprogress { color: var(--dim);  border-color: var(--line2); }
+
+.np-doi {
+  display: block;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--dim);
+  word-break: break-all;
+}
+
+.np-doi:hover { color: var(--cyan); }
+
+/* ─── SVG graph styles ────────────────────────────── */
+.net-link          { stroke: rgba(0,0,0,0.15); stroke-width: 1; }
+.net-link.dimmed   { opacity: 0.06; }
+
+.net-node circle {
+  stroke: rgba(0,0,0,0.2);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: stroke-width 0.15s;
+}
+
+.net-node:hover circle  { stroke-width: 3; stroke: var(--ink); }
+.net-node.selected circle { stroke-width: 3; stroke: var(--ink); }
+.net-node.dimmed circle { opacity: 0.1; }
+.net-node.dimmed text   { opacity: 0.06; }
+
+.net-node text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  fill: var(--ink);
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: var(--bg2);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.net-region {
+  fill-opacity: 0.07;
+  stroke-opacity: 0.25;
+  stroke-width: 1;
+  stroke-dasharray: 5 4;
+  pointer-events: none;
+}
+
+.net-region-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  fill: rgba(100,110,125,0.65);
+  pointer-events: none;
+}
+
+.net-group-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  fill: var(--ink);
+  opacity: 0.6;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: var(--bg2);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 960px) {
+  .pub-layout {
+    grid-template-columns: 1fr;
   }
-  20%, 24%, 55% {
-    opacity: 0.3;
+
+  .network-aside {
+    position: relative;
+    height: 500px;
+    border-left: none;
+    border-top: 1px solid var(--line2);
+    order: -1;
   }
+
+  .publications-list {
+    padding: 28px 24px 60px;
+  }
+}
+
+@media (max-width: 560px) {
+  .pub-cover { display: none; }
 }
