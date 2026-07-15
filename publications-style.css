@@ -105,8 +105,17 @@
 }
 
 .pub-doi {
+  display: block;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--dim);
+  letter-spacing: 0;
+}
+
+.pub-badge {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 10px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 9.5px;
   color: var(--dim);
@@ -116,7 +125,7 @@
   transition: all 0.2s;
 }
 
-.publication-card:hover .pub-doi {
+.publication-card:hover .pub-badge {
   border-color: var(--cyan);
   color: var(--cyan);
 }
