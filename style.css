@@ -758,6 +758,25 @@ img {
   object-position: center;
 }
 
+/* Artwork variant: keep full artwork visible and centered inside the fixed media frame */
+.project-media--artwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  padding: 20px;
+}
+
+.project-media--artwork img,
+.project-media.project-media--artwork img {
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  display: block;
+}
+
 
 /* COPY */
 
