@@ -769,10 +769,15 @@ img {
 
 .project-media--artwork img,
 .project-media.project-media--artwork img {
-  width: 92%;
-  height: 92%;
-  object-fit: contain;
-  object-position: center;
+  /* slightly larger so the purple circle is more prominent */
+  width: 96% !important;
+  height: 96% !important;
+
+  /* preserve full artwork while allowing us to center the circle */
+  object-fit: contain !important;
+  /* shift focus left so the circle appears centered in the frame */
+  object-position: 30% 50% !important;
+
   padding: 0;
   display: block;
 }
