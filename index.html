@@ -1,200 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carolina Sotério</title>
-  <link rel="stylesheet" href="shared.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carolina Sotério | Learning Scientist</title>
+<meta
+  name="description"
+  content="Carolina Sotério is a learning scientist and doctoral student of education at Columbia University studying science learning, tools, AI, and public participation."
+>
+
+<link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <a href="/" class="header-brand"><span class="brand-prompt">&gt;</span> Carolina Sotério</a>
-  <nav class="nav">
-    <a href="/" class="active">About // CV</a>
-    <a href="/portfolio">Projects</a>
-    <a href="/publications">Publications</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="site-name" href="/" aria-label="Carolina Sotério home">
+      Carolina Sotério
+    </a>
 
-<!-- HERO -->
-<section class="hero-section">
-  <div class="hero-grid">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-active" href="/">About // CV</a>
+      <a href="#projects">Projects</a>
+      <a href="/publications">Publications</a>
+    </nav>
+  </header>
 
-    <!-- Left column -->
-    <div class="hero-left">
-      <!-- <div class="section-eyebrow">Doctoral Student · Columbia University</div> -->
-      <h1 class="hero-h1">
-        Building <span class="grad-text">tools_</span><br>
-        for science<br>
-        learning
-      </h1>
-      <p class="hero-tagline">
-        Learning Scientist <span class="blink">▍</span>
-      </p>
-      <p class="hero-bio">
-        I'm a Doctoral Student of Education at <strong>Columbia University</strong>. I study how the design, interfaces, and algorithmic architectures of diverse environments and tools — spanning <span class="hl-c">physical toolkits, AI, and social networks</span> — shape how the public participates in scientific practices. My work draws on <span class="hl-m">emancipatory education</span>, <strong>critical pedagogy</strong>, and <strong>constructionism</strong>.
-      </p>
-      <p class="hero-bio">
-        I'm also the inventor of <span class="hl-c"><strong>Lab-on-a-Book</strong></span>, a low-cost, AI-powered, paper-based science platform that helps science learning cross spaces.
-      </p>
-      <div class="hero-ctas">
-        <a href="https://docs.google.com/document/d/17h74K6BT25yxG58nEJepD_dzTIMvep2XjBGOGRfHvZE/edit?usp=sharing"
-           target="_blank" class="btn-ink">↓ Download CV</a>
-        <a href="/publications" class="btn-cyan">→ Publications</a>
-        <a href="/portfolio" class="btn-outline">→ Portfolio</a>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero-section grid-bg" id="about">
+      <div class="hero-grid">
+
+        <div class="hero-left">
+          <h1 class="hero-h1">
+            Building <span class="grad-text">tools</span><span class="cursor-mark">_</span><br>
+            for science<br>
+            learning
+          </h1>
+
+          <p class="hero-tagline">Learning Scientist<span class="typing-cursor"></span></p>
+
+          <div class="hero-bio">
+            <p>
+              I'm a Doctoral Student of Education at <strong>Columbia University</strong>.
+              I study how the design, interfaces, and algorithmic architectures of diverse
+              environments and tools — spanning
+              <span class="hl-c">physical toolkits, AI, and social networks</span> —
+              shape how the public participates in scientific practices.
+              My work draws on <strong>critical pedagogy</strong>,
+              <strong>constructionism</strong>, and
+              <strong>sociotechnical perspectives on learning and technology</strong>.
+            </p>
+
+            <p>
+              I'm also the inventor of
+              <a class="inline-link" href="/portfolio#lab-on-a-book">Lab-on-a-Book</a>,
+              a low-cost, AI-powered, paper-based science platform that helps science
+              learning cross spaces.
+            </p>
+          </div>
+
+          <div class="hero-ctas">
+            <a class="button button-dark" href="/cv.pdf" target="_blank" rel="noopener">
+              ↓ DOWNLOAD CV
+            </a>
+            <a class="button button-cyan" href="/publications">
+              → PUBLICATIONS
+            </a>
+            <a class="button button-outline" href="/portfolio">
+              → PORTFOLIO
+            </a>
+          </div>
+        </div>
+
+
+        <aside class="hero-right" aria-label="Profile">
+          <div class="portrait-wrap">
+            <img
+              src="./assets/profile.png"
+              alt="Portrait of Carolina Sotério"
+            >
+            <div class="portrait-overlay"></div>
+            <div class="portrait-scanlines"></div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-row">
+              <span class="stat-chip chip-cyan">ROLE</span>
+              <span>Doctoral Student of Education</span>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-chip chip-lime">LOC</span>
+              <span>Teachers College · Columbia University · New York, NY</span>
+            </div>
+          </div>
+        </aside>
+
       </div>
-    </div>
+    </section>
 
-    <!-- Right column -->
-    <div class="hero-right">
-      <div class="portrait-wrap">
-        <img src="picture.png" alt="Carolina Sotério" />
-        <div class="portrait-overlay"></div>
-        <div class="portrait-scanlines"></div>
+
+    <!-- SELECTED WORK -->
+    <section class="featured-section" id="projects">
+      <div class="section-kicker">02: SELECTED WORKS</div>
+
+      <div class="featured-grid">
+
+        <article class="project-card project-cyan">
+          <div class="project-media">
+            <img
+              src="./assets/lab-on-a-book.png"
+              alt="Lab-on-a-Book project preview"
+            >
+          </div>
+
+          <div class="project-copy">
+            <h2 class="project-title">Lab-on-a-Book</h2>
+            <p class="project-description">
+              A low-cost, AI-powered, paper-based science platform that helps
+              science learning cross spaces.
+            </p>
+            <a class="project-link" href="/portfolio#lab-on-a-book">
+              VIEW PROJECT →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="project-card project-mag">
+          <div class="project-media">
+            <img
+              src="./assets/conversational-ai.png"
+              alt="Conversational AI project preview"
+            >
+          </div>
+
+          <div class="project-copy">
+            <h2 class="project-title">Conversational AI</h2>
+            <p class="project-description">
+              Studying how learners question, test, and make sense of
+              generative AI during scientific inquiry.
+            </p>
+            <a class="project-link" href="/portfolio#conversational-ai">
+              VIEW PROJECT →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="project-card project-lime">
+          <div class="project-media pfi-media" aria-hidden="true">
+            <div class="pfi-topline">EDUCATION · DIALOGUE · PRAXIS</div>
+            <div class="pfi-wordmark">
+              PAULO<br>
+              FREIRE<br>
+              INITIATIVE
+            </div>
+            <div class="pfi-rule"></div>
+          </div>
+
+          <div class="project-copy">
+            <h2 class="project-title">Paulo Freire Initiative</h2>
+            <p class="project-description">
+              Collaborative work connecting Freirean pedagogy, public dialogue,
+              and educational practice across communities and media.
+            </p>
+            <a class="project-link" href="/portfolio#paulo-freire-initiative">
+              VIEW PROJECT →
+            </a>
+          </div>
+        </article>
+
       </div>
-      <div class="hero-stats">
-        <div class="stat-row">
-          <span class="stat-chip chip-cyan">role</span>
-          <span class="stat-val">Doctoral Student of Education</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-chip chip-mag">home</span>
-          <span class="stat-val">Teachers College · Columbia University</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-chip chip-lime">loc</span>
-          <span class="stat-val">New York, NY</span>
-        </div>
+    </section>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+
+      <div class="footer-heading">
+        <span class="footer-kicker">03: GET IN TOUCH</span>
+        <span class="footer-title">Let's connect<span>_</span></span>
       </div>
+
+      <a class="footer-link footer-cyan" href="mailto:YOUR_EMAIL@columbia.edu">
+        <span class="footer-link-label">EMAIL</span>
+        <span class="footer-link-value">YOUR_EMAIL@columbia.edu</span>
+      </a>
+
+      <a
+        class="footer-link footer-mag"
+        href="https://www.linkedin.com/in/soterio/"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="footer-link-label">LINKEDIN</span>
+        <span class="footer-link-value">linkedin.com/in/soterio</span>
+      </a>
+
+      <a
+        class="footer-link footer-lime"
+        href="https://github.com/drsoterio"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="footer-link-label">GITHUB</span>
+        <span class="footer-link-value">github.com/drsoterio</span>
+      </a>
+
+      <a
+        class="footer-link footer-violet"
+        href="https://orcid.org/0000-0001-8040-0861"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="footer-link-label">ORCID</span>
+        <span class="footer-link-value">0000-0001-8040-0861</span>
+      </a>
+
+      <a
+        class="footer-link footer-scholar"
+        href="https://scholar.google.com/citations?user=GOnm_98AAAAJ&hl=en&oi=ao"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="footer-link-label">SCHOLAR</span>
+        <span class="footer-link-value">Google Scholar</span>
+      </a>
+
     </div>
 
-  </div>
-</section>
-
-<!-- FEATURED WORK 
-<section class="featured-section">
-  <div class="featured-inner">
-    <div class="featured-heading">
-      <div class="section-eyebrow">Highlights</div>
-      <h2 class="section-h2">Featured work_</h2>
+    <div class="footer-bottom">
+      <span>© Carolina Sotério. All rights reserved.</span>
+      <span>Teachers College · Columbia University · New York, NY</span>
     </div>
-    <div class="featured-grid featured-grid--2">
-      <a href="/portfolio" class="bs-card feat-card">
-        <div class="feat-tag" style="color:var(--cyan)">INVENTION</div>
-        <div class="feat-title">Lab-on-a-Book</div>
-        <div class="feat-meta">Paper-based chemistry kit</div>
-        <div class="feat-arrow">→</div>
-      </a>
-      <a href="/portfolio" class="bs-card feat-card">
-        <div class="feat-tag" style="color:var(--mag)">INITIATIVE</div>
-        <div class="feat-title">Paulo Freire Initiative</div>
-        <div class="feat-meta">Columbia University</div>
-        <div class="feat-arrow">→</div>
-      </a>
-    </div>
-  </div>
-</section> -->
-
-<!-- SKILLS -->
-<section class="skills-section">
-  <div class="skills-inner">
-    <div class="skills-heading">
-      <div class="section-eyebrow">Expertise</div>
-      <h2 class="section-h2">How I work_</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-card-bar">
-          <span class="skill-dot" style="background:var(--cyan)"></span>
-          <span class="skill-filename">programming.json</span>
-        </div>
-        <p class="skill-desc">Building tools across web, physical computing, and data workflows.</p>
-        <div class="skill-chips">
-          <span class="bs-chip">HTML</span>
-          <span class="bs-chip">CSS</span>
-          <span class="bs-chip">JavaScript</span>
-          <span class="bs-chip">Python</span>
-          <span class="bs-chip">C/C++</span>
-          <span class="bs-chip">LaTeX</span>
-          <span class="bs-chip">Arduino</span>
-          <span class="bs-chip">Microcontrollers</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-bar">
-          <span class="skill-dot" style="background:var(--mag)"></span>
-          <span class="skill-filename">instructional.json</span>
-        </div>
-        <p class="skill-desc">Designing learning experiences for K-12 and youth-centered contexts.</p>
-        <div class="skill-chips">
-          <span class="bs-chip">Curriculum Dev.</span>
-          <span class="bs-chip">UI/UX Design</span>
-          <span class="bs-chip">Adobe CS</span>
-          <span class="bs-chip">Figma</span>
-          <span class="bs-chip">Canvas LMS</span>
-          <span class="bs-chip">K-12</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-bar">
-          <span class="skill-dot" style="background:var(--lime)"></span>
-          <span class="skill-filename">research.json</span>
-        </div>
-        <p class="skill-desc">Studying how people learn with and through technology.</p>
-        <div class="skill-chips">
-          <span class="bs-chip">Mixed-Methods</span>
-          <span class="bs-chip">NLP</span>
-          <span class="bs-chip">Content Analysis</span>
-          <span class="bs-chip">NVivo</span>
-          <span class="bs-chip">Surveys</span>
-          <span class="bs-chip">SPSS</span>
-          <span class="bs-chip">Participatory-Action</span>
-          <span class="bs-chip">DBR</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-main">
-    <div class="footer-top">
-      <div class="footer-headline">Say hi<span class="dot">.</span></div>
-    </div>
-    <div class="footer-links">
-      <a href="https://github.com/drsoterio/" target="_blank" class="footer-link">
-        <span>GitHub</span><span>↗</span>
-      </a>
-      <a href="https://www.linkedin.com/in/soterio/" target="_blank" class="footer-link">
-        <span>LinkedIn</span><span>↗</span>
-      </a>
-      <a href="https://orcid.org/0000-0001-8040-0861" target="_blank" class="footer-link">
-        <span>ORCID</span><span>↗</span>
-      </a>
-      <a href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ" target="_blank" class="footer-link">
-        <span>Scholar</span><span>↗</span>
-      </a>
-    </div>
-  </div>
-  <div class="footer-meta">
-    <span>© 2026 Carolina Sotério</span>
-    <span>New York, NY</span>
-  </div>
-</footer>
-
-<script>
-  function updateClock() {
-    const t = new Date().toUTCString();
-    document.getElementById('utc-clock').textContent = t.slice(17, 25) + ' UTC';
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-</script>
+  </footer>
 
 </body>
 </html>
