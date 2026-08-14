@@ -737,15 +737,8 @@ img {
 
 /* Photographic/project images: cover the frame */
 .project-image--cover {
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-/* Fine-tune the Lab-on-a-Book image center (shift slightly right/down) */
-.lab-image {
-  /* adjust these values until the purple circle is centered */
-  /* move focus left (smaller X%) so the purple circle centers */
-  object-position: 22% 48% !important;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -761,8 +754,8 @@ img {
 .project-image--contain {
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
-  object-position: center center !important;
+  object-fit: contain;
+  object-position: center;
 }
 
 
