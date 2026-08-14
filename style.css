@@ -709,55 +709,53 @@ img {
 /* IMAGE */
 
 .project-media {
-  min-height: 270px;
+  width: 100%;
+  height: 270px;
 
   overflow: hidden;
 
   background: #edf2f6;
 
-  border-right:
-    1px
-    solid
-    #d1dae2;
+  border-right: 1px solid #d1dae2;
+
+  /* ensure media frames don't resize based on image */
+  display: block;
 }
 
 
-.project-media img {
+/* Generic image inside project media. Width/height are controlled by the frame above. */
+.project-image {
   width: 100%;
   height: 100%;
 
   display: block;
-
-  object-fit: cover;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 
-/*
-   Use this for images/screenshots/logos that
-   should not be cropped.
-*/
+/* Photographic/project images: cover the frame */
+.project-image--cover {
+  object-fit: cover;
+  object-position: center;
+}
 
-.project-media-contain {
-  padding: 10px;
 
+/* Logos: keep fully visible centered inside the same fixed-size frame */
+.project-media--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
   background: #f1f4f7;
 }
 
-
-.project-media-contain img {
+.project-image--contain {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-}
-
-
-/* PFI logo specifically */
-
-.pfi-logo-wrap {
-  padding: 24px;
-}
-
-
-.pfi-logo-wrap img {
-  object-fit: contain;
+  object-position: center;
 }
 
 
