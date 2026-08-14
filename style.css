@@ -748,34 +748,26 @@ img {
   align-items: center;
   justify-content: center;
   background: #e7e7e7;
-  /* reduce padding so the artwork can be larger in the frame */
+  /* reduce padding so logos fit nicely */
   padding: 12px;
 }
-  .project-media--artwork img,
-  .project-media.project-media--artwork img {
-    /* maximize visible artwork inside the frame */
-    width: 100% !important;
-    height: 100% !important;
 
-    object-fit: contain !important;
-    /* tuned focus so the purple circle sits near center */
-    object-position: 30% 50% !important;
-
-    padding: 0;
-    display: block;
+/* Artwork variant: scaled-up and cropped to emphasize the purple circle */
+.project-media--artwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #e7e7e7;
-  padding: 20px;
+  padding: 8px;
 }
 
 .project-media--artwork img,
 .project-media.project-media--artwork img {
-  /* slightly larger so the purple circle is more prominent */
-  width: 96% !important;
-  height: 96% !important;
+  /* scale artwork beyond the frame and use cover so the circle fills it */
+  width: 120% !important;
+  height: 120% !important;
 
-  /* preserve full artwork while allowing us to center the circle */
-  object-fit: contain !important;
-  /* shift focus left so the circle appears centered in the frame */
+  object-fit: cover !important;
   object-position: 30% 50% !important;
 
   padding: 0;
