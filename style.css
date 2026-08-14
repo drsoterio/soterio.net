@@ -744,7 +744,8 @@ img {
 /* Fine-tune the Lab-on-a-Book image center (shift slightly right/down) */
 .lab-image {
   /* adjust these values until the purple circle is centered */
-  object-position: 40% 48% !important;
+  /* move focus left (smaller X%) so the purple circle centers */
+  object-position: 22% 48% !important;
 }
 
 
