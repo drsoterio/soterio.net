@@ -737,8 +737,8 @@ img {
 
 /* Photographic/project images: cover the frame */
 .project-image--cover {
-  object-fit: cover;
-  object-position: center;
+  object-fit: cover !important;
+  object-position: center center !important;
 }
 
 
@@ -754,8 +754,8 @@ img {
 .project-image--contain {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: contain !important;
+  object-position: center center !important;
 }
 
 
