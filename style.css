@@ -747,22 +747,22 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
-  background: #f1f4f7;
+  background: #e7e7e7;
+  /* reduce padding so the artwork can be larger in the frame */
+  padding: 12px;
 }
+  .project-media--artwork img,
+  .project-media.project-media--artwork img {
+    /* maximize visible artwork inside the frame */
+    width: 100% !important;
+    height: 100% !important;
 
-.project-image--contain {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
+    object-fit: contain !important;
+    /* tuned focus so the purple circle sits near center */
+    object-position: 30% 50% !important;
 
-/* Artwork variant: keep full artwork visible and centered inside the fixed media frame */
-.project-media--artwork {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 0;
+    display: block;
   background: #e7e7e7;
   padding: 20px;
 }
