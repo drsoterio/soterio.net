@@ -741,6 +741,12 @@ img {
   object-position: center center !important;
 }
 
+/* Fine-tune the Lab-on-a-Book image center (shift slightly right/down) */
+.lab-image {
+  /* adjust these values until the purple circle is centered */
+  object-position: 40% 48% !important;
+}
+
 
 /* Logos: keep fully visible centered inside the same fixed-size frame */
 .project-media--logo {
