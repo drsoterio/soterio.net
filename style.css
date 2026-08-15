@@ -783,6 +783,12 @@ img {
   display: block;
 }
 
+/* Specific tuning for Lab-on-a-Book artwork to center the purple circle */
+.project-media--artwork img.crop-labbook {
+  /* nudge horizontal position so the purple circle is centered */
+  object-position: 38% 50% !important;
+}
+
 
 /* COPY */
 
