@@ -331,7 +331,6 @@ img {
 
 
 .hero-bio strong {
-  color: var(--ink);
   font-weight: 700;
 }
 
@@ -350,10 +349,6 @@ img {
   color: #ff2aa6; /* brighter neon pink */
 
   font-weight: 700;
-
-  text-shadow:
-    0 0 10px rgba(255, 42, 166, 0.18),
-    0 0 24px rgba(255, 42, 166, 0.08);
 }
 
 
