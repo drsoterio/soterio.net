@@ -20,6 +20,7 @@
 
   --cyan: #08b7df;
   --mag: #ef2494;
+  --pink: #ff2aa6;
   --lime: #78d337;
   --violet: #7367d5;
 
@@ -572,9 +573,9 @@ img {
 }
 
 
-.chip-lime {
-  color: var(--ink);
-  background: var(--lime);
+.chip-pink {
+  color: #fff;
+  background: var(--pink);
 }
 
 
