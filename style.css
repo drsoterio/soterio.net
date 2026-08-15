@@ -639,9 +639,10 @@ img {
      Image roughly 43%, copy roughly 57%.
      This matches the mockup you selected.
   */
+  /* increase image area to emphasize visuals */
   grid-template-columns:
-    43%
-    57%;
+    60%
+    40%;
 
   position: relative;
 
@@ -736,12 +737,16 @@ img {
 
 /* Photographic/project images: cover the frame */
 .project-image--cover {
-    /* use contain-like behavior to avoid cropping; centered */
-    object-fit: contain !important;
-    object-position: center center !important;
-    width: auto;
-    height: 100%;
-    max-width: 100%;
+  /* photographic images should fill the frame and may be cropped */
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* Crop helper for Conversational AI phone close-up */
+.crop-phone {
+  object-position: 55% 45% !important;
+  /* allow a bit of scaling beyond frame if needed */
+  transform: translateZ(0);
 }
 
 
