@@ -149,6 +149,11 @@ img {
     color 0.15s ease;
 }
 
+/* Hide specific nav items when needed */
+.site-nav a.nav-hidden {
+  display: none !important;
+}
+
 
 .site-nav a:hover {
   background: #eef3f7;
