@@ -725,8 +725,8 @@ img {
 
 /* Generic image inside project media. Width/height are controlled by the frame above. */
 .project-image {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  height: 246px;
 
   display: block;
   border: 0;
