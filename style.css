@@ -764,7 +764,7 @@ img {
 /* Artwork variant: scaled-up and cropped to emphasize the purple circle */
 .project-media--artwork {
   display: flex;
-  align-items: stretch;
+  align-items: center; /* center artwork vertically inside the frame */
   justify-content: center;
   background: #e7e7e7;
   padding: 0;
@@ -785,8 +785,8 @@ img {
 
 /* Specific tuning for Lab-on-a-Book artwork to center the purple circle */
 .project-media--artwork img.crop-labbook {
-  /* nudge horizontal position so the purple circle is centered */
-  object-position: 38% 50% !important;
+  /* nudge horizontal position and center vertically */
+  object-position: 50% 50% !important;
 }
 
 
