@@ -1,455 +1,138 @@
-/* Publications page — page-specific styles. Shared design system in shared.css */
+/* Publications page. Shared tokens, header, and footer live in style.css */
 
-.publications-main {
-  flex: 1;
-  overflow: hidden;
+.publications-main { padding-bottom: 96px; }
+
+.pub-layout,
+.pub-intro .wrap { max-width: 920px; margin-left: auto; margin-right: auto; }
+
+/* ── Intro ─────────────────────────────────────────── */
+
+.pub-intro { position: relative; padding: clamp(56px, 7vw, 96px) 0 24px; }
+
+.pub-intro::before {
+  content: "";
+  position: absolute;
+  inset: -80px 0 0;
+  background-image:
+    linear-gradient(rgba(10, 10, 11, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 11, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 30% 20%, #000 20%, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 70% at 30% 20%, #000 20%, transparent 70%);
+  pointer-events: none;
 }
 
-/* ─── Two-column layout ───────────────────────────── */
-.pub-layout {
-  display: grid;
-  grid-template-columns: 1fr 460px;
-  align-items: start;
-  min-height: calc(100vh - 60px);
+.pub-intro .wrap { position: relative; }
+
+.pub-stats { display: flex; gap: 16px; margin-top: 18px; font-family: var(--mono); font-size: 13px; color: var(--dim); }
+.pub-stats b { color: var(--ink); font-weight: 500; }
+
+.year-jump {
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-/* ─── Left: publications list ─────────────────────── */
-.publications-list {
-  padding: 36px 48px 80px 48px;
+.year-jump::-webkit-scrollbar { display: none; }
+
+.year-jump a {
+  padding: 6px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
 }
 
-.pub-list-heading {
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--line2);
-  margin-bottom: 8px;
-}
+.year-jump a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
 
-.pub-list-count {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
+/* ── List ──────────────────────────────────────────── */
 
-/* Year groups */
-.year-group {
-  margin-bottom: 8px;
-}
+.year-group { scroll-margin-top: 96px; }
 
 .year-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.20em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 0 14px;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
   color: var(--ink);
-  padding: 32px 0 14px;
-  border-bottom: 1.5px solid var(--line2);
-  margin-bottom: 4px;
 }
 
-/* ─── Publication card ────────────────────────────── */
+.year-label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
 .publication-card {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 20px 22px;
   margin-bottom: 10px;
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-left: 3px solid transparent;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
   color: inherit;
-  transition: border-color 0.22s, border-left-color 0.22s, background 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .publication-card:hover {
-  background: var(--bg3);
-  border-color: var(--line2);
-  border-left-color: var(--cyan);
-  box-shadow: 2px 4px 16px rgba(0,0,0,0.08);
-  transform: translateX(3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
-.pub-body {
-  flex: 1;
-  min-width: 0;
-  user-select: text;
-  -webkit-user-select: text;
-}
+.pub-body { flex: 1; min-width: 0; }
 
 .pub-title {
-  font-size: 15px;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 16.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
   color: var(--ink);
-  margin-bottom: 7px;
-  line-height: 1.45;
-  transition: color 0.2s;
-  user-select: text;
-  -webkit-user-select: text;
 }
 
-.publication-card:hover .pub-title { color: var(--cyan); }
-
-.pub-meta {
-  font-size: 13px;
-  color: var(--dim);
-  line-height: 1.6;
-  user-select: text;
-  -webkit-user-select: text;
-}
+.pub-meta { font-size: 14px; line-height: 1.6; color: var(--dim); }
 
 .pub-meta strong {
-  color: var(--mag);
-  font-weight: 500;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--faint);
 }
 
-.pub-doi {
-  display: block;
-  margin-top: 10px;
-  font-family: inherit;
-  font-size: 12px;
-  color: var(--dim);
-  letter-spacing: 0;
-}
+.pub-doi { margin-top: 8px; font-family: var(--mono); font-size: 12px; color: var(--faint); }
 
 .pub-badge {
-  display: block;
+  display: inline-block;
   margin-top: 10px;
-  margin-left: 40px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
-  color: var(--dim);
-  border: 1px solid var(--line);
-  padding: 2px 8px;
-  letter-spacing: 0.04em;
-  transition: all 0.2s;
-}
-
-.publication-card:hover .pub-badge {
-  border-color: var(--cyan);
-  color: var(--cyan);
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--grad);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 11.5px;
 }
 
 .pub-cover {
-  width: 58px;
+  width: 56px;
   height: 74px;
+  flex-shrink: 0;
   object-fit: cover;
-  border: 1px solid var(--line);
-  flex-shrink: 0;
-  opacity: 0.8;
-  transition: opacity 0.2s, border-color 0.2s;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px var(--border), 0 4px 10px -4px rgba(10, 10, 11, 0.2);
 }
 
-.publication-card:hover .pub-cover {
-  opacity: 1;
-  border-color: var(--line2);
-}
-
-/* ─── Right: network aside (sticky) ──────────────── */
-.network-aside {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid var(--line2);
-  background: var(--bg2);
-  overflow: hidden;
-  transition: all 0.25s;
-}
-
-.network-aside.fullscreen {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  width: 100vw;
-  height: 100vh;
-  border-left: none;
-}
-
-/* Aside header */
-.net-aside-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px 10px;
-  border-bottom: 1px solid var(--line);
-  flex-shrink: 0;
-}
-
-.net-aside-title { display: flex; flex-direction: column; gap: 2px; }
-
-.net-title-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-.net-title-sub {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8.5px;
-  color: var(--dim);
-  opacity: 0.7;
-  letter-spacing: 0.08em;
-}
-
-.net-expand-btn {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
-  padding: 4px 10px;
-  background: transparent;
-  border: 1px solid var(--line2);
-  color: var(--dim);
-  cursor: pointer;
-  letter-spacing: 0.06em;
-  transition: all 0.15s;
-  flex-shrink: 0;
-}
-
-.net-expand-btn:hover {
-  color: var(--cyan);
-  border-color: var(--cyan);
-}
-
-/* Controls */
-.net-controls-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px 16px 12px;
-  border-bottom: 1px solid var(--line);
-  flex-shrink: 0;
-  background: var(--bg3);
-}
-
-.ctrl-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-
-.toggle-row {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.net-toggle {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  padding: 3px 9px;
-  background: transparent;
-  border: 1px solid var(--line2);
-  color: var(--dim);
-  cursor: pointer;
-  transition: all 0.15s;
-  letter-spacing: 0.04em;
-}
-
-.net-toggle:hover { color: var(--ink); border-color: var(--line2); }
-
-.net-toggle.active {
-  background: var(--cyan);
-  color: #fff;
-  border-color: var(--cyan);
-}
-
-/* Graph canvas */
-.net-graph {
-  flex: 1 1 0;
-  position: relative;
-  overflow: hidden;
-  min-height: 0;
-  background: var(--bg);
-}
-
-#net-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  cursor: grab;
-}
-
-#net-svg:active { cursor: grabbing; }
-
-/* Info panel */
-.net-panel {
-  flex-shrink: 0;
-  background: var(--bg2);
-  border-top: 1px solid var(--line2);
-  padding: 14px 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 12.5px;
-  line-height: 1.55;
-  overflow: hidden;
-}
-
-.np-empty {
-  color: var(--dim);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10.5px;
-  line-height: 2;
-  text-align: center;
-  padding: 8px 0;
-}
-
-.np-cluster {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.np-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 4px;
-  line-height: 1.35;
-}
-
-.np-title a { color: inherit; }
-.np-title a:hover { color: var(--cyan); }
-
-.np-authors {
-  font-size: 11px;
-  color: var(--dim);
-  margin-bottom: 2px;
-}
-
-.np-venue {
-  font-size: 11px;
-  color: var(--dim);
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-.np-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 4px;
-  font-size: 11px;
-}
-
-.np-key {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--dim);
-  width: 50px;
-  flex-shrink: 0;
-  padding-top: 1px;
-}
-
-.np-val { color: var(--text); }
-
-.np-badge {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  padding: 2px 7px;
-  border: 1px solid;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.badge-published  { color: var(--cyan); border-color: rgba(0,180,216,0.4); }
-.badge-inprogress { color: var(--dim);  border-color: var(--line2); }
-
-.np-doi {
-  display: block;
-  margin-top: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  color: var(--dim);
-  word-break: break-all;
-}
-
-.np-doi:hover { color: var(--cyan); }
-
-/* ─── SVG graph styles ────────────────────────────── */
-.net-link          { stroke: rgba(0,0,0,0.15); stroke-width: 1; }
-.net-link.dimmed   { opacity: 0.06; }
-
-.net-node circle {
-  stroke: rgba(0,0,0,0.2);
-  stroke-width: 1.5;
-  cursor: pointer;
-  transition: stroke-width 0.15s;
-}
-
-.net-node:hover circle  { stroke-width: 3; stroke: var(--ink); }
-.net-node.selected circle { stroke-width: 3; stroke: var(--ink); }
-.net-node.dimmed circle { opacity: 0.1; }
-.net-node.dimmed text   { opacity: 0.06; }
-
-.net-node text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8px;
-  fill: var(--ink);
-  pointer-events: none;
-  paint-order: stroke;
-  stroke: var(--bg2);
-  stroke-width: 3px;
-  stroke-linejoin: round;
-}
-
-.net-region {
-  fill-opacity: 0.07;
-  stroke-opacity: 0.25;
-  stroke-width: 1;
-  stroke-dasharray: 5 4;
-  pointer-events: none;
-}
-
-.net-region-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  fill: rgba(100,110,125,0.65);
-  pointer-events: none;
-}
-
-.net-group-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  fill: var(--ink);
-  opacity: 0.6;
-  pointer-events: none;
-  paint-order: stroke;
-  stroke: var(--bg2);
-  stroke-width: 4px;
-  stroke-linejoin: round;
-}
-
-/* ─── Responsive ──────────────────────────────────── */
-@media (max-width: 960px) {
-  .pub-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .network-aside {
-    position: relative;
-    height: 500px;
-    border-left: none;
-    border-top: 1px solid var(--line2);
-    order: -1;
-  }
-
-  .publications-list {
-    padding: 28px 24px 60px;
-  }
+@media (max-width: 760px) {
+  .publication-card { padding: 16px; }
 }
 
 @media (max-width: 560px) {

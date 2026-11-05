@@ -5,400 +5,384 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Carolina Sotério | Learning Scientist</title>
+  <meta name="description" content="Carolina Sotério is a learning scientist and doctoral student at Teachers College, Columbia University, and the inventor of Lab-on-a-Book. She studies how tools, AI, and social platforms shape public participation in science.">
 
-  <meta
-    name="description"
-    content="Carolina Sotério is a learning scientist and doctoral student of education at Columbia University studying science learning, tools, AI, and public participation."
-  >
+  <meta property="og:title" content="Carolina Sotério | Learning Scientist">
+  <meta property="og:description" content="Building tools for science learning. Doctoral student at Teachers College, Columbia University; inventor of Lab-on-a-Book.">
+  <meta property="og:image" content="https://soterio.net/picture.png">
+  <meta property="og:url" content="https://soterio.net/">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
-    <a class="site-name" href="/" aria-label="Carolina Sotério home">
-      Carolina Sotério
-    </a>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="nav-active" href="/">About // CV</a>
-      <a class="nav-hidden" href="#selected-works">Projects</a>
-      <a href="/publications">Publications</a>
-    </nav>
+    <div class="bar">
+      <a class="site-name" href="/" aria-label="Carolina Sotério home"><span class="prompt">&gt;_</span> Carolina Sotério</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#research" class="hide-sm">Research</a>
+        <a href="/publications">Publications</a>
+        <a href="#press" class="hide-sm">Press</a>
+        <a class="nav-cv" href="https://docs.google.com/document/d/17h74K6BT25yxG58nEJepD_dzTIMvep2XjBGOGRfHvZE/edit?usp=sharing" target="_blank" rel="noopener">CV ↗</a>
+      </nav>
+    </div>
   </header>
 
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero-section grid-bg" id="about">
-      <div class="hero-grid">
+    <!-- ═══ HERO ═══════════════════════════════════════════ -->
+    <section class="hero" id="about">
+      <div class="wrap hero-grid">
 
-        <!-- LEFT -->
-        <div class="hero-left">
+        <div>
+          <a class="pill" href="#projects">
+            <span class="tag">new</span>
+            Lab-on-a-Book won the 2026 Tools Competition →
+          </a>
 
           <h1 class="hero-h1">
-            Building
-            <span class="grad-text">tools</span><span class="cursor-mark">_</span><br>
-            for science<br>
-            learning
+            Building <span class="grad-text">tools</span><span class="cursor">_</span><br>
+            for science learning
           </h1>
 
           <p class="hero-tagline">
-            Learning Scientist<span class="typing-cursor"></span>
+            <b>learning scientist</b><span class="sep">/</span>chemist<span class="sep">/</span>science communicator
           </p>
 
           <div class="hero-bio">
-
             <p>
-              I'm a PhD Student in Media, Technology, and Learning at
-              <strong>Columbia University</strong>.
-              I study how the design, interfaces, and algorithmic architectures
-              of diverse environments and tools — spanning
-              <span class="hl-c">physical toolkits, AI, and social networks</span>
-              — shape how the public participates in scientific practices.
-
-              My work draws on
-              <strong class="neon-pink">constructionism</strong>,
-              <strong>critical pedagogy</strong>, and
-              <strong>sociotechnical perspectives on learning and technology</strong>.
+              I'm a PhD student in Technology, Media, and Learning at
+              <strong>Teachers College, Columbia University</strong>, advised by
+              Paulo Blikstein in the Transformative Learning Technologies Lab.
+              I study how the design, interfaces, and algorithmic architectures of
+              physical toolkits, AI, and social networks shape how the public
+              participates in scientific practices.
             </p>
-
             <p>
-              I'm also the inventor of
-              <a
-                class="inline-link"
-                href="/portfolio#lab-on-a-book"
-              >
-                Lab-on-a-Book
-              </a>, an
-              <strong>award-winning </strong>, ultra low-cost, AI-powered, paper-based science platform that helps
-              science learning cross spaces.
+              My work draws on constructionism, critical pedagogy, and sociotechnical
+              perspectives on learning. I'm the inventor of
+              <a class="inline-link" href="#projects">Lab-on-a-Book</a> and a program
+              coordinator at the
+              <a class="inline-link" href="https://ilas.columbia.edu/freireinitiative" target="_blank" rel="noopener">Paulo Freire Initiative</a>.
             </p>
-
           </div>
 
-
-          <!-- CTA BUTTONS -->
-          <div class="hero-ctas">
-
-            <a
-              class="button button-dark"
-              href="https://docs.google.com/document/d/17h74K6BT25yxG58nEJepD_dzTIMvep2XjBGOGRfHvZE/edit?usp=sharing"
-              target="_blank"
-              rel="noopener"
-            >
-              ↓ DOWNLOAD CV
-            </a>
-
-            <a
-              class="button button-cyan"
-              href="/publications"
-            >
-              → PUBLICATIONS
-            </a>
-
-            <a
-              class="button button-outline"
-              href="#projects"
-            >
-              → PORTFOLIO
-            </a>
-
+          <div class="btn-row">
+            <a class="button button-dark" href="/publications">Publications <span aria-hidden="true">→</span></a>
+            <a class="button button-light" href="https://docs.google.com/document/d/17h74K6BT25yxG58nEJepD_dzTIMvep2XjBGOGRfHvZE/edit?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+            <a class="button button-light" href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
           </div>
-
         </div>
 
-
-        <!-- RIGHT / PROFILE -->
         <aside class="hero-right" aria-label="Profile">
-
-          <div class="portrait-wrap">
-
-            <img
-              src="./picture.png"
-              alt="Portrait of Carolina Sotério"
-            >
-
-            <div class="portrait-overlay"></div>
-            <div class="portrait-scanlines"></div>
-
+          <div class="portrait">
+            <img src="./picture.png" alt="Portrait of Carolina Sotério" width="1080" height="1080">
           </div>
-
-
-          <!-- only ROLE + LOC -->
-          <div class="hero-stats">
-
-            <div class="stat-row">
-              <span class="stat-chip chip-cyan">ROLE</span>
-              <span>Doctoral Student of Education</span>
-            </div>
-
-            <div class="stat-row">
-              <span class="stat-chip chip-pink">LOC</span>
-              <span>
-                Teachers College · Columbia University · New York, NY
-              </span>
-            </div>
-
+          <div class="term">
+            <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>~/now</span></div>
+            <dl>
+              <dt>role</dt><dd>PhD Student, TC Columbia</dd>
+              <dt>lab</dt><dd>Transformative Learning Tech Lab</dd>
+              <dt>also</dt><dd>Paulo Freire Initiative</dd>
+            </dl>
           </div>
-
         </aside>
 
       </div>
     </section>
 
 
+    <!-- ═══ PROJECTS ═══════════════════════════════════════ -->
+    <section class="section" id="projects">
+      <div class="wrap">
 
-    <!-- SELECTED WORK -->
-    <section class="featured-section" id="projects">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">projects/</div>
+            <h2 class="h2">Things I'm building<span class="cursor">_</span></h2>
+          </div>
+        </div>
 
-      <div class="section-kicker">
-        SELECTED WORKS
+        <article class="feature">
+          <div class="card feature-media">
+            <img src="./lab-photo-book.jpg" alt="Hands holding a cyanotype print made with Lab-on-a-Book, next to the book and cups of solution" loading="lazy">
+            <span class="feature-badge">Tools Competition 2026 winner</span>
+          </div>
+
+          <div class="card feature-body">
+            <div class="eyebrow">lab-on-a-book · inventor</div>
+            <h3 class="feature-title">A real chemistry lab, printed on paper.</h3>
+            <p>
+              Lab-on-a-Book is an ultra-low-cost, paper-based science platform that lets
+              students do real experiments, from cyanotypes and chromatography to
+              pH and microbiology, at home or in schools that have no lab.
+              Lab-on-a-Bot, an AI curiosity companion, guides students with questions
+              instead of handing them answers.
+            </p>
+
+            <ul class="facts">
+              <li><span class="k">award</span><span>Tools Competition winner (USD 50,000), Renaissance Philanthropy &amp; The Learning Agency</span></li>
+              <li><span class="k">research</span><span>Constructionism 2025; three ISLS 2026 papers, including an Outstanding Student Poster Award</span></li>
+            </ul>
+
+            <div class="btn-row">
+              <a class="button button-dark" href="https://labonabook.com/" target="_blank" rel="noopener">Visit labonabook.com ↗</a>
+              <a class="button button-light" href="https://doi.org/10.21240/constr/2025/105.X" target="_blank" rel="noopener">Read the paper</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse">
+          <div class="card feature-body">
+            <div class="eyebrow">paulo freire initiative · program coordinator</div>
+            <h3 class="feature-title">Freirean pedagogy, in dialogue with the world.</h3>
+            <p>
+              At Columbia's Institute of Latin American Studies, the Paulo Freire Initiative
+              connects Freirean pedagogy, public dialogue, and educational practice across
+              communities and media. I have been a researcher there since 2024 and a program
+              coordinator since 2025.
+            </p>
+
+            <ul class="facts">
+              <li><span class="k">output</span><span><em>Reading the World: A Curriculum Guide to the Film</em> (2026), co-authored</span></li>
+              <li><span class="k">talk</span><span>“Paulo Freire: Pedagogy of the Oppressed”, Teachers College, 2025</span></li>
+            </ul>
+
+            <div class="btn-row">
+              <a class="button button-dark" href="https://ilas.columbia.edu/freireinitiative" target="_blank" rel="noopener">Visit the initiative ↗</a>
+              <a class="button button-light" href="https://doi.org/10.7916/sxpd-w679" target="_blank" rel="noopener">Curriculum guide</a>
+            </div>
+          </div>
+
+          <div class="card feature-media feature-media--logo">
+            <img src="./PFI logo.png" alt="Paulo Freire Initiative logo" loading="lazy">
+          </div>
+        </article>
+
       </div>
+    </section>
 
 
-      <div class="featured-grid">
+    <!-- ═══ RESEARCH ═══════════════════════════════════════ -->
+    <section class="section" id="research">
+      <div class="wrap">
 
-
-        <!-- LAB-ON-A-BOOK -->
-        <article class="project-card project-cyan">
-
-          <div class="project-media project-media--artwork">
-            <img
-              class="crop-labbook"
-              src="./LAB-ON-A-BOOK_Tools_Competition_Pitch (2).png"
-              alt="Lab-on-a-Book project preview"
-            >
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">research/</div>
+            <h2 class="h2">What I work on<span class="cursor">_</span></h2>
+            <p class="section-lede">Three threads, one question: how do the tools we build shape who gets to take part in science?</p>
           </div>
+        </div>
 
-          <div class="project-copy">
+        <div class="themes">
 
-            <h2 class="project-title">
-              Lab-on-a-Book
-            </h2>
+          <article class="card theme theme--cyan">
+            <span class="theme-icon">01</span>
+            <h3>Low-cost tools &amp; boundary objects</h3>
+            <p>Designing paper-based, pocketable labs and studying how students use the same experiments at home and in the classroom.</p>
+            <ul>
+              <li><a href="https://doi.org/10.21240/constr/2025/105.X" target="_blank" rel="noopener">Lab-on-a-Book (Constructionism 2025)</a></li>
+              <li>Students' journeys with boundary tools (ISLS 2026)</li>
+              <li>A pocketable, low-cost lab (ISLS 2026)</li>
+            </ul>
+          </article>
 
-            <p class="project-description">
-              A low-cost, AI-powered, paper-based science platform
-              that helps science learning cross spaces.
-            </p>
+          <article class="card theme theme--violet">
+            <span class="theme-icon">02</span>
+            <h3>AI in science inquiry</h3>
+            <p>How learners question, test, and make sense of AI chatbots during inquiry, and whether they treat the AI as a friend, an instructor, a browser, or a partner.</p>
+            <ul>
+              <li>Interaction modes in student-AI conversation (NARST 2026)</li>
+              <li>Mental models of AI chatbots (ISLS 2026)</li>
+            </ul>
+          </article>
 
-            <a
-              class="project-link"
-              href="https://labonabook.com/"
-            >
-              VIEW PROJECT →
+          <article class="card theme theme--pink">
+            <span class="theme-icon">03</span>
+            <h3>Platforms, publics &amp; democracy</h3>
+            <p>How social platforms and algorithms shape collective knowledge-building, from far-right YouTube comments to critical pedagogy under algorithmic constraints.</p>
+            <ul>
+              <li><a href="isls_25.pdf" target="_blank" rel="noopener">Co-constructing (twisted) knowledge (ISLS 2025)</a></li>
+              <li>Can critical pedagogy survive algorithmic constraints? (ISLS 2026)</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══ SELECTED PUBLICATIONS ══════════════════════════ -->
+    <section class="section" id="publications">
+      <div class="wrap">
+
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">publications/</div>
+            <h2 class="h2">Selected reading<span class="cursor">_</span></h2>
+          </div>
+          <a class="more-link" href="/publications">All publications <span>→</span></a>
+        </div>
+
+        <div class="card pub-list">
+
+          <a class="pub-row" href="https://doi.org/10.7916/sxpd-w679" target="_blank" rel="noopener">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Reading the World: A curriculum guide to the film</h3>
+              <p class="pub-authors">Lee Davies, A., <b>Sotério, C.</b>, Yamamoto, E., Dias, F. V., Caldas, I. C., &amp; Aronchi, J.</p>
+              <div class="pub-venue"><span class="tag">guidebook</span>Paulo Freire Initiative, Columbia University</div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="pub-row" href="https://doi.org/10.1177/13548565261460141" target="_blank" rel="noopener">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Digital ecologies of hope: A natural history of emerging media futures</h3>
+              <p class="pub-authors">Abdelbagi, A., Avenant, S., Bezerra, I., … Literat, I., … &amp; <b>Sotério, C.</b></p>
+              <div class="pub-venue"><span class="tag">journal</span>Convergence: The International Journal of Research into New Media Technologies</div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="pub-row" href="https://2026.isls.org/proceedings/" target="_blank" rel="noopener">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Students' mental models of AI chatbots in inquiry learning: A friend, an instructor, a browser, and a partner</h3>
+              <p class="pub-authors">Fuhrmann, T., <b>Sotério, C.</b>, &amp; Blikstein, P.</p>
+              <div class="pub-venue"><span class="tag">conference</span>ISLS 2026</div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="pub-row" href="https://2026.isls.org/proceedings/" target="_blank" rel="noopener">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Complex science, simple tools: A pocketable, low-cost lab for sophisticated experiments in middle-school science</h3>
+              <p class="pub-authors">Zhang, X., <b>Sotério, C.</b>, &amp; Blikstein, P.</p>
+              <div class="pub-venue"><span class="tag">conference</span>ISLS 2026<span class="tag tag--award">Outstanding Student Poster Award</span></div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="pub-row" href="https://doi.org/10.21240/constr/2025/105.X" target="_blank" rel="noopener">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>Lab-on-a-Book: A paper-based chemistry kit for hands-on science learning in under-resourced schools</h3>
+              <p class="pub-authors"><b>Sotério, C.</b>, &amp; Blikstein, P.</p>
+              <div class="pub-venue"><span class="tag">conference</span>Constructionism 2025, Zurich</div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="pub-row" href="https://doi.org/10.1021/acs.jchemed.2c00277" target="_blank" rel="noopener">
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>Chemistry students as science journalists: Creating a virtual magazine on COVID-19</h3>
+              <p class="pub-authors"><b>Sotério, C.</b>, &amp; Queiroz, S. L.</p>
+              <div class="pub-venue"><span class="tag">journal</span>Journal of Chemical Education, 100(1)</div>
+            </div>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══ PRESS ══════════════════════════════════════════ -->
+    <section class="section" id="press">
+      <div class="wrap">
+
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">press/</div>
+            <h2 class="h2">In the media<span class="cursor">_</span></h2>
+          </div>
+        </div>
+
+        <div class="press-grid">
+            <a class="press-card" href="https://tools-competition.org/26-winners-press-release/" target="_blank" rel="noopener">
+              <div class="press-media press-media--contain"><img src="press/tools-winners.png" alt="Tools Competition Winners" loading="lazy"></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">Tools Competition</span><span class="arr">↗</span></div>
+                <div class="press-title">World's largest ed tech competition drives the future of learning science with 21 new prizes</div>
+                <div class="press-meta">2026 · Press release</div>
+              </div>
             </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- CONVERSATIONAL AI -->
-        <article class="project-card project-mag">
-
-          <div class="project-media">
-            <img
-              class="project-image project-image--cover crop-phone"
-              src="./AI.png"
-              alt="Conversational AI project preview"
-            >
-          </div>
-
-          <div class="project-copy">
-
-            <h2 class="project-title">
-              Conversational AI
-            </h2>
-
-            <p class="project-description">
-              Studying how learners question, test, and make sense of
-              generative AI during scientific inquiry.
-            </p>
-
-            <a
-              class="project-link"
-              href="https://labonabook.com/"
-            >
-              VIEW PROJECT →
+            <a class="press-card" href="https://tools-competition.org/ai-curiosity-deeper-thinking/" target="_blank" rel="noopener">
+              <div class="press-media"><img src="press/tools-ai-curiosity.jpg" alt="Students working together on a laptop" loading="lazy"></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">Tools Competition</span><span class="arr">↗</span></div>
+                <div class="press-title">Designing AI that sparks curiosity and deeper thinking</div>
+                <div class="press-meta">2026 · Feature</div>
+              </div>
             </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PAULO FREIRE INITIATIVE -->
-        <article class="project-card project-lime">
-
-          <div class="project-media project-media--logo">
-            <img
-              class="project-image project-image--contain"
-              src="./PFI logo.png"
-              alt="Paulo Freire Initiative logo"
-            >
-          </div>
-
-          <div class="project-copy">
-
-            <h2 class="project-title">
-              Paulo Freire Initiative
-            </h2>
-
-            <p class="project-description">
-              Collaborative work connecting Freirean pedagogy,
-              public dialogue, and educational practice across
-              communities and media.
-            </p>
-
-            <a
-              class="project-link"
-              href="https://www.freireinitiative.org/"
-            >
-              VIEW PROJECT →
+            <a class="press-card" href="https://www.instagram.com/reel/DMNdoxxOTne/" target="_blank" rel="noopener">
+              <div class="press-media"><img src="press/lemann-loab.jpg" alt="Cyanotypes and chromatography from Lab-on-a-Book" loading="lazy"></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">Lemann Center</span><span class="arr">↗</span></div>
+                <div class="press-title">Lab-on-a-Book</div>
+                <div class="press-meta">Lemann Center for Brazilian Studies · Video</div>
+              </div>
             </a>
-
-          </div>
-
-        </article>
-
-
+            <a class="press-card" href="https://www.tc.columbia.edu/articles/2025/may/unlocking-creative-scholarship-with-mediafest-2025/" target="_blank" rel="noopener">
+              <div class="press-media"><img src="press/tc-mediafest.jpg" alt="MediaFest 2025 at Teachers College" loading="lazy"></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">TC News</span><span class="arr">↗</span></div>
+                <div class="press-title">Unlocking creative scholarship with MediaFest</div>
+                <div class="press-meta">2025 · Teachers College</div>
+              </div>
+            </a>
+            <a class="press-card" href="https://www.instagram.com/reel/DXuSIKiB4G2/" target="_blank" rel="noopener">
+              <div class="press-media press-media--text press-media--pink"><span class="press-cover-text">&ldquo;Life is a Marathon&rdquo;</span></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">Portal Drauzio Varella</span><span class="arr">↗</span></div>
+                <div class="press-title">&ldquo;Life is a Marathon&rdquo; New York City film premiere</div>
+                <div class="press-meta">Video</div>
+              </div>
+            </a>
+            <a class="press-card" href="https://doi.org/10.1515/ci-2023-0204" target="_blank" rel="noopener">
+              <div class="press-media press-media--text press-media--cyan"><span class="press-cover-text">Chemistry International</span></div>
+              <div class="press-body">
+                <div class="press-top"><span class="press-outlet">Chemistry International</span><span class="arr">↗</span></div>
+                <div class="press-title">The Global Conversation on Sustainability</div>
+                <div class="press-meta">2023 · IUPAC</div>
+              </div>
+            </a>
+        </div>
       </div>
     </section>
 
   </main>
 
 
-
-  <!-- FOOTER -->
   <footer class="site-footer">
-
-    <div class="footer-main">
-
-
-      <!-- CONTACT HEADING -->
-      <div class="footer-heading">
-
-        <span class="footer-kicker">
-        </span>
-
-        <span class="footer-title">
-          Let's connect<span>_</span>
-        </span>
-
+    <div class="footer-card">
+      <div class="footer-top">
+        <h2 class="footer-title">Let's connect<span class="cursor">_</span></h2>
+        <a class="footer-email" href="mailto:cs4465@tc.columbia.edu">cs4465@tc.columbia.edu</a>
       </div>
-
-
-      <!-- EMAIL -->
-      <a
-        class="footer-link footer-cyan"
-        href="mailto:cs4465@tc.columbia.edu"
-      >
-        <span class="footer-link-label">
-          EMAIL
-        </span>
-
-        <span class="footer-link-value">
-          cs4465@tc.columbia.edu
-        </span>
-      </a>
-
-
-      <!-- LINKEDIN -->
-      <a
-        class="footer-link footer-mag"
-        href="https://www.linkedin.com/in/soterio/"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="footer-link-label">
-          LINKEDIN
-        </span>
-
-        <span class="footer-link-value">
-          linkedin.com/in/soterio
-        </span>
-      </a>
-
-
-      <!-- GITHUB -->
-      <a
-        class="footer-link footer-lime"
-        href="https://github.com/drsoterio"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="footer-link-label">
-          GITHUB
-        </span>
-
-        <span class="footer-link-value">
-          github.com/drsoterio
-        </span>
-      </a>
-
-
-      <!-- ORCID -->
-      <a
-        class="footer-link footer-violet"
-        href="https://orcid.org/0000-0001-8040-0861"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="footer-link-label">
-          ORCID
-        </span>
-
-        <span class="footer-link-value">
-          0000-0001-8040-0861
-        </span>
-      </a>
-
-
-      <!-- SCHOLAR -->
-      <a
-        class="footer-link footer-scholar"
-        href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ&hl=en&oi=ao"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="footer-link-label">
-          SCHOLAR
-        </span>
-
-        <span class="footer-link-value">
-          Google Scholar
-        </span>
-      </a>
-
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/soterio/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+        <a href="https://github.com/drsoterio" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+        <a href="https://orcid.org/0000-0001-8040-0861" target="_blank" rel="noopener">ORCID <span>↗</span></a>
+        <a href="https://scholar.google.com/citations?user=5MNcZI0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span>↗</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Carolina Sotério</span>
+        <span>Teachers College · Columbia University · New York, NY</span>
+      </div>
     </div>
-
-
-    <div class="footer-bottom">
-
-      <span>
-        © Carolina Sotério. All rights reserved.
-      </span>
-
-      <span>
-        Teachers College · Columbia University · New York, NY
-      </span>
-
-    </div>
-
   </footer>
 
 </body>
