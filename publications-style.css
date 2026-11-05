@@ -51,90 +51,25 @@
 
 .year-jump a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
 
-/* ── List ──────────────────────────────────────────── */
+/* ── List: rows reuse .pub-list / .pub-row from style.css ── */
 
-.year-group { scroll-margin-top: 96px; }
+.publications-main .pub-list { margin-top: 24px; }
+.pub-row[id] { scroll-margin-top: 96px; }
+.pub-row--static:hover { background: none; }
 
-.year-label {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 40px 0 14px;
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--ink);
-}
 
-.year-label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.pub-row--thumb { grid-template-columns: 44px 48px minmax(0, 1fr) 28px; gap: 18px; }
 
-.publication-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px 22px;
-  margin-bottom: 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  color: inherit;
-  text-decoration: none;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-
-.publication-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
-.pub-body { flex: 1; min-width: 0; }
-
-.pub-title {
-  margin-bottom: 8px;
-  font-size: 16.5px;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-}
-
-.pub-meta { font-size: 14px; line-height: 1.6; color: var(--dim); }
-
-.pub-meta strong {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--faint);
-}
-
-.pub-doi { margin-top: 8px; font-family: var(--mono); font-size: 12px; color: var(--faint); }
-
-.pub-badge {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--grad);
-  color: #fff;
-  font-family: var(--mono);
-  font-size: 11.5px;
-}
-
-.pub-cover {
-  width: 56px;
-  height: 74px;
-  flex-shrink: 0;
+.pub-thumb {
+  width: 48px;
+  height: 64px;
   object-fit: cover;
   border-radius: 6px;
+  background: var(--muted);
   box-shadow: 0 0 0 1px var(--border), 0 4px 10px -4px rgba(10, 10, 11, 0.2);
 }
 
 @media (max-width: 760px) {
-  .publication-card { padding: 16px; }
-}
-
-@media (max-width: 560px) {
-  .pub-cover { display: none; }
+  .pub-row--thumb { grid-template-columns: 48px minmax(0, 1fr); gap: 6px 14px; }
+  .pub-row--thumb .pub-year { grid-column: 1 / -1; }
 }
