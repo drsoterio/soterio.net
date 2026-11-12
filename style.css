@@ -44,6 +44,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
 
@@ -711,6 +713,51 @@ img { max-width: 100%; display: block; }
   .pub-arrow { display: none; }
 
   .press-grid { grid-template-columns: 1fr; }
+
+  /* larger, more readable type on phones */
+  body { font-size: 17px; }
+  .site-nav a { font-size: 15px; }
+  .eyebrow { font-size: 13.5px; }
+  .section-lede { font-size: 17.5px; }
+  .button { height: 48px; font-size: 16px; }
+  .pill { font-size: 14.5px; }
+  .pill .tag { font-size: 12px; }
+  .hero-tagline { font-size: 15.5px; }
+  .hero-bio { font-size: 17.5px; }
+  .term { font-size: 14px; }
+  .term-bar { font-size: 12.5px; }
+  .term dl { grid-template-columns: 48px 1fr; }
+  .feature-body > p { font-size: 17px; }
+  .facts li { font-size: 16px; }
+  .facts .k { font-size: 13px; }
+  .feature-badge { font-size: 14px; }
+  .theme > p { font-size: 16.5px; }
+  .theme li { font-size: 15.5px; }
+  .pub-year { font-size: 14px; }
+  .pub-row h3 { font-size: 18px; }
+  .pub-authors { font-size: 15.5px; }
+  .pub-venue { font-size: 15px; }
+  .tag { font-size: 12.5px; }
+  .pub-doi { font-size: 13px; }
+  .press-outlet { font-size: 13.5px; }
+  .press-title { font-size: 18px; }
+  .press-meta { font-size: 14.5px; }
+  .footer-email { font-size: 16px; word-break: break-all; }
+  .footer-links a { font-size: 15.5px; padding: 11px 18px; }
+  .footer-bottom { font-size: 13.5px; }
+}
+
+/* small phones: put the nav on its own row so every link fits */
+@media (max-width: 560px) {
+  .site-header .bar {
+    flex-wrap: wrap;
+    row-gap: 4px;
+    padding: 10px 10px 8px 16px;
+    border-radius: 22px;
+  }
+  .site-name { font-size: 17px; }
+  .site-nav { width: 100%; justify-content: space-between; margin-left: -6px; }
+  .site-nav a { padding: 8px 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

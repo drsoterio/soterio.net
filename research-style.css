@@ -30,4 +30,9 @@
 
 @media (max-width: 760px) {
   .research-theme { grid-template-columns: 1fr; gap: 16px; padding: 22px; }
+  .rt-head h2 { font-size: 24px; }
+  .rt-head p { font-size: 16.5px; }
+  .rt-label { font-size: 13.5px; }
+  .rt-title { font-size: 17px; }
+  .rt-meta { font-size: 14.5px; }
 }

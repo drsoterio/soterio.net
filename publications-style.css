@@ -72,4 +72,6 @@
 @media (max-width: 760px) {
   .pub-row--thumb { grid-template-columns: 48px minmax(0, 1fr); gap: 6px 14px; }
   .pub-row--thumb .pub-year { grid-column: 1 / -1; }
+  .pub-stats { font-size: 14.5px; }
+  .year-jump a { font-size: 14.5px; padding: 8px 16px; }
 }
