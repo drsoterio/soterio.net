@@ -129,4 +129,10 @@
   .portfolio-main  { padding: 0 var(--px) 60px; }
   .portfolio-grid  { grid-template-columns: 1fr; }
   .portfolio-hero  { padding: 36px 0 28px; }
+  .project-card img { height: 220px; }
+  .card-body  { padding: 18px 20px 22px; }
+  .card-title { font-size: 19px; }
+  .card-desc  { font-size: 16.5px; }
+  .tag        { font-size: 12px; padding: 4px 9px; }
+  .cat-label  { font-size: 13px; letter-spacing: 0.16em; }
 }

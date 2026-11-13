@@ -93,14 +93,5 @@
   </div>
 </footer>
 
-<script>
-  function updateClock() {
-    const t = new Date().toUTCString();
-    document.getElementById('utc-clock').textContent = t.slice(17, 25) + ' UTC';
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-</script>
-
 </body>
 </html>
